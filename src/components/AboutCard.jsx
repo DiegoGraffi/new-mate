@@ -15,17 +15,17 @@ const AboutCard = ({ id, imgUrl, title, text, index, active, handleClick }) => {
       <img
         src={imgUrl}
         alt={title}
-        className="absolute w-full h-full object-cover"
+        className="absolute w-full h-full object-cover rounded-xl"
       />
 
       {active !== id ? (
-        <div className="absolute z-0 bg-white sm:self-end py-5 lg:bottom-0 w-[100%] h-[30%] flex justify-center items-center ">
+        <div className="absolute z-0 bg-white sm:self-end py-5 lg:bottom-0 w-[100%] h-[40%] flex justify-center items-center rounded-b-xl">
           <h3 className="font-raleway font-[400] sm:text-[20px] text-[56px] text-[#686868] lg:rotate-[-90deg] lg:origin-[0,0] ">
             {title}
           </h3>
         </div>
       ) : (
-        <div className="absolute bottom-0 p-8 justify-start w-full flex-col bg-white sm:h-auto  lg:h-[30%] overflow-hidden">
+        <div className="absolute bottom-0 p-8 justify-start w-full flex-col bg-white sm:h-auto  lg:h-[40%] overflow-hidden rounded-b-xl">
           <h3 className="font-raleway font-[400] sm:text-[20px] text-[56px] text-[#686868] ">
             {title}
           </h3>

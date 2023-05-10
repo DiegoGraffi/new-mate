@@ -18,3 +18,21 @@ export const about = [
     text: "We believe that effective communication is key to the success of any project, and we strive to keep our clients informed every step of the way. We are responsive to our clients needs and questions, and we provide regular updates on the progress of their projects. By prioritizing clear communication, we are able to build strong relationships with our clients and deliver solutions that meet their needs and exceed their expectations.",
   },
 ];
+
+export const services = [
+  {
+    id: "services-01",
+    imgUrl: "/services-design.jpg",
+    text: "We create visually stunning and user-friendly websites that are tailored to your brand and target audience. Our designs are responsive, ensuring that your website looks great on any device.",
+  },
+  {
+    id: "services-02",
+    imgUrl: "/services-prototyping.jpg",
+    text: "Lightweight or fully-functional prototypes give a user a testable sense of the product and help to validate concepts and ideas before using expensive development resources. We believe its the best way to design and create great products.",
+  },
+  {
+    id: "services-01",
+    imgUrl: "/services-development.jpg",
+    text: "We provide development services using the latest standards and best practices to bring your digital products to life.",
+  },
+];

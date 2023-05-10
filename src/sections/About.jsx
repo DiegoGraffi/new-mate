@@ -1,10 +1,6 @@
 import { useState } from "react";
-import Image from "next/image";
 import { about } from "../constants/index";
 import AboutCard from "@/components/AboutCard";
-import creatives from "../../public/about-creatives.png";
-import learners from "../../public/about-learners.png";
-import communicators from "../../public/about-communicators.png";
 
 const About = () => {
   const [active, setActive] = useState("about-1");
@@ -50,3 +46,4 @@ const About = () => {
 };
 
 export default About;
+

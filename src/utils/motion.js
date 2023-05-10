@@ -4,8 +4,8 @@ export const navVariants = {
     y: -50,
     transition: {
       type: "spring",
-      stiffness: 300,
-      damping: 140,
+      stiffness: 500,
+      damping: 100,
     },
   },
   show: {
@@ -156,6 +156,20 @@ export const footerVariants = {
       type: "spring",
       stiffness: 80,
       delay: 0.5,
+    },
+  },
+};
+
+export const wordAnimation = {
+  initial: {
+    y: 100,
+  },
+  animate: {
+    y: 0,
+
+    transition: {
+      ease: [0.6, 0.01, 0.05, 0.95],
+      duration: 1,
     },
   },
 };
