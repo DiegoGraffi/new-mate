@@ -55,6 +55,7 @@ const Hero = () => {
             src={logo}
             alt="logo-mate"
             className="relative z-20 w-[70vw] md:w-[40vw] max-w-[600px] "
+            priority
           />
         </div>
       </section>
