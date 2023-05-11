@@ -28,16 +28,16 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 mt-[50px] lg:mt-[100px] relative h-[900px] lg:h-[700px]">
-        <div className="flex text-center mb-[50px] lg:mb-0 lg:text-right justify-center lg:justify-end p-[25px] items-center">
-          <ul>
-            <li className="font-raleway text-[24px] font-[200] cursor-pointer px-5 py-2 hover:font-[400] text-[#686868]">
+      <div className="grid grid-cols-1 grid-rows-6 lg:grid-cols-4 lg:grid-rows-1 mt-[50px] lg:mt-[100px] relative h-[600px] md:h-[900px] lg:h-[700px]">
+        <div className="flex text-center mb-0  lg:mb-0 lg:text-right justify-center lg:justify-end  lg:p-[25px] items-center ">
+          <ul className="flex lg:flex-col ">
+            <li className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]">
               design
             </li>
-            <li className="font-raleway text-[24px] font-[200] cursor-pointer px-5 py-2 hover:font-[400] text-[#686868]">
+            <li className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]">
               prototyping
             </li>
-            <li className="font-raleway text-[24px] font-[200] cursor-pointer px-5 py-2 hover:font-[400] text-[#686868]">
+            <li className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]">
               development
             </li>
           </ul>
@@ -46,11 +46,11 @@ const Services = () => {
         <div className="grid col-span-1 lg:col-span-2 row-span-2 lg:row-span-1 overflow-hidden">
           <Image
             src={ServiceDesign}
-            className="h-full object-cover  rounded-l-xl"
+            className="h-full object-cover rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl"
           />
         </div>
 
-        <div className="flex basis-2/4 flex-col flex-grow p-[25px] justify-between bg-[#E1E1DC] rounded-r-xl">
+        <div className="grid row-span-3 p-[25px] justify-between  bg-[#E1E1DC] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-tr-xl ">
           <div className="flex justify-center h-full items-center">
             <p className="font-raleway text-[16px] font-[200] text-[#686868] text-justify ">
               We offer a comprehensive range of web design and development

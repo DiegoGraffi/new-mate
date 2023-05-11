@@ -6,7 +6,7 @@ const About = () => {
   const [active, setActive] = useState("about-1");
 
   return (
-    <section className="h-[100vh] max-w-[1536px] mx-auto p-[25px] mt-[100px]">
+    <section className="h-auto max-w-[1536px] mx-auto p-[25px] mt-[100px]">
       <div className="flex flex-col justify-between ">
         <div className="w-[120px]">
           <p className="font-raleway text-[20px] text-[#686868] font-[200]">
@@ -15,8 +15,8 @@ const About = () => {
           <hr className="border-[#686868] border-b-0 opacity-50 my-3" />
         </div>
 
-        <div className="flex justify-between">
-          <h2 className="font-raleway text-[96px] font-[800] leading-[70px] flex basis-1/3 mt-5">
+        <div className="flex flex-col md:flex-row justify-between">
+          <h2 className="font-raleway text-[96px] font-[800] leading-[70px] flex basis-1/3 mt-5 mb-[50px]">
             about us
           </h2>
           <p className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3">
@@ -29,7 +29,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+      <div className="mt-[50px] flex lg:flex-row flex-col min-h-[1000px] lg:min-h-[70vh] gap-5">
         {about.map((body, index) => (
           <AboutCard
             key={body.id}
@@ -46,4 +46,3 @@ const About = () => {
 };
 
 export default About;
-
