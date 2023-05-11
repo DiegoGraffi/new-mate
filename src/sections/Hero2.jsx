@@ -10,7 +10,9 @@ const Hero = () => {
       <Image
         src={HeroBan}
         alt="fondo"
-        className="absolute -z-10 w-[100vw] h-[100vh] object-cover saturate-0 contrast-[0.7]"
+        className="-z-10 w-[100vw] h-[100vh] object-cover saturate-0 contrast-[0.7]"
+        priority
+        fill
       />
 
       <section className="h-[100vh] max-w-[1536px] mx-auto flex flex-col content-between">
@@ -20,6 +22,7 @@ const Hero = () => {
               src={letter}
               alt="logo"
               className="object-contain w-[30px] md:w-[50px]"
+              priority
             />
           </div>
 
