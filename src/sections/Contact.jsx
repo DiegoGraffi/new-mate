@@ -1,12 +1,9 @@
 import Image from "next/image";
 import aLetter from "../../public/contact-a.png";
-import { motion } from "framer-motion";
-
-import { navVariants, slideIn, wordAnimation } from "@/utils/motion";
 
 const About = () => {
   return (
-    <section className="h-[100vh] max-w-[1536px] mx-auto p-[25px] mt-[100px] ">
+    <section className="h-[100vh] max-w-[1536px] mx-auto p-[25px] mt-[25px] lg:mt-[100px] ">
       <div className="flex flex-col justify-between ">
         <div className="w-[120px]">
           <p className="font-raleway text-[20px] text-[#686868] font-[200]">
@@ -15,8 +12,8 @@ const About = () => {
           <hr className="border-[#686868] border-b-0 opacity-50 my-3" />
         </div>
 
-        <div className="flex justify-between">
-          <h2 className="font-raleway text-[96px] font-[800] leading-[70px] flex basis-1/3 mt-5">
+        <div className="flex flex-col md:flex-row justify-between">
+          <h2 className="font-raleway text-[60px] md:text-[96px] font-[800] leading-[70px] flex basis-1/3 mt-5 mb-[20px] lg:mb-[50px]">
             let's talk
           </h2>
           <p className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3">
@@ -33,16 +30,16 @@ const About = () => {
         </div>
       </div>
 
-      <div className="mt-[50px] grid grid-cols-3 min-h-[70vh] auto-rows-fr">
-        <div className="bg-[#E1E1DC] h-[550px] col-span-2 rounded-l-xl">
-          <form className="p-[25px] grid grid-rows-3 ">
-            <p className="font-raleway text-[64px] leading-[75px]">
+      <div className="mt-[50px] grid grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]">
+        <div className="bg-[#E1E1DC] h-auto md:h-[550px] col-span-2 rounded-xl lg:rounded-r-none">
+          <form className="p-[25px] grid grid-rows-4 md:grid-rows-3">
+            <p className="font-raleway text-[52px] md:text-[64px] leading-[64px] md:leading-[75px] row-span-1">
               say <br />
               hello!
             </p>
 
-            <div>
-              <div className="grid grid-cols-2 gap-[10px]">
+            <div className="grid row-span-2 md:row-span-1">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
                 <div className="flex flex-col">
                   <label className="font-raleway">name</label>
                   <input
@@ -72,16 +69,16 @@ const About = () => {
               </div>
             </div>
 
-            <div className="flex justify-between items-baseline mt-[35px]">
+            <div className="flex flex-col md:flex-row items-center justify-between md:items-baseline mt-[35px] row-span-1">
               <p className="font-raleway">matestudio.webdev@gmail.com</p>
 
-              <div className="h-[90px] w-[90px] bg-white p-2 flex items-end">
+              <div className="h-[90px] w-[90px] bg-white p-2 flex items-end mt-[25px] md:mt-0">
                 <p className="font-raleway">send.</p>
               </div>
             </div>
           </form>
         </div>
-        <div>
+        <div className="hidden lg:block">
           <Image src={aLetter} className="h-[550px] object-cover" />
         </div>
       </div>
