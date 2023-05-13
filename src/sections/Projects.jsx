@@ -3,24 +3,44 @@ import Image from "next/image";
 import work1 from "../../public/work1.png";
 import { motion } from "framer-motion";
 import { RxArrowBottomRight } from "react-icons/rx";
-import { navVariants } from "@/utils/motion";
+import {
+  wordAnimation,
+  textAnimation,
+  contentAnimation,
+  sectionName,
+} from "@/utils/motion";
 
 const Projects = () => {
   return (
     <section className="h-auto md:max-w-[1536px] mx-auto p-[25px] mt-[30px]">
-      <div className="flex flex-col justify-between ">
-        <div className="w-[100px]">
+      <div className="flex flex-col justify-between overflow-hidden">
+        <motion.div
+          variants={sectionName}
+          initial={"initial"}
+          whileInView={"animate"}
+          className="w-[100px]"
+        >
           <p className="font-raleway text-[20px] text-[#686868] font-[200]">
             our work
           </p>
           <hr className="border-[#686868] border-b-0 opacity-50 my-3" />
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col md:flex-row justify-between">
-          <h2 className="font-raleway text-[60px] mb-5 md:text-[96px] font-[800] md:leading-[50px] flex md:basis-1/3 md:mt-5">
+        <div className="flex flex-col md:flex-row justify-between overflow-hidden">
+          <motion.h2
+            variants={wordAnimation}
+            initial={"initial"}
+            whileInView={"animate"}
+            className="font-raleway text-[60px] mb-5 md:text-[96px] font-[800] md:leading-[50px] flex md:basis-1/3 md:mt-5"
+          >
             projects
-          </h2>
-          <p className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3">
+          </motion.h2>
+          <motion.p
+            variants={textAnimation}
+            initial={"initial"}
+            whileInView={"animate"}
+            className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
+          >
             Here you can explore some of the amazing web design and development
             projects we have completed for our clients.
             <br />
@@ -29,11 +49,17 @@ const Projects = () => {
             websites that are tailored to our clients' unique needs. Our team of
             experienced designers and developers work together to create custom
             solutions that help businesses stand out in the digital world.
-          </p>
+          </motion.p>
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-0 mt-[50px] relative ">
+      <motion.div
+        variants={contentAnimation}
+        initial={"initial"}
+        whileInView={"animate"}
+        viewport={{ once: true }}
+        className="flex flex-col lg:flex-row gap-0 mt-[50px] relative "
+      >
         <div className="flex max-h-[700px] ">
           <Image
             src={work1}
@@ -64,7 +90,7 @@ const Projects = () => {
             <span className="font-raleway">03</span>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="flex justify-between mt-[25px] ">
         <p className="font-raleway text-[#686868] text-[26px] font-[200] cursor-pointer px-5 py-2 transition-all duration-150 ease-in-out hover:bg-[#E1E1DC]">
