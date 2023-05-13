@@ -7,7 +7,7 @@ export const about = [
   },
   {
     id: "about-2",
-    imgUrl: "/about-learners.png",
+    imgUrl: "/about-learners.jpg",
     title: "learners",
     text: "We value continuous learning and growth. Our team of designers and developers are committed to staying up-to-date with the latest industry trends and technologies to deliver innovative solutions that meet our clients needs.",
   },

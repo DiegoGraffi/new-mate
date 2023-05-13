@@ -162,10 +162,60 @@ export const footerVariants = {
 
 export const wordAnimation = {
   initial: {
-    y: 100,
+    opacity: 0,
+    y: 50,
   },
   animate: {
+    opacity: 1,
     y: 0,
+
+    transition: {
+      ease: [0.6, 0.01, 0.05, 0.95],
+      duration: 1,
+    },
+  },
+};
+
+export const textAnimation = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      ease: [0.6, 0.01, 0.05, 0.95],
+      duration: 1.3,
+    },
+  },
+};
+
+export const sectionName = {
+  initial: {
+    opacity: 0,
+    y: -50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      ease: [0.6, 0.01, 0.05, 0.95],
+      duration: 1,
+    },
+  },
+};
+
+export const contentAnimation = {
+  initial: {
+    opacity: 0,
+    scale: 0.5,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
 
     transition: {
       ease: [0.6, 0.01, 0.05, 0.95],

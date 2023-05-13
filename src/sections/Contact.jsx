@@ -1,5 +1,7 @@
 import Image from "next/image";
 import aLetter from "../../public/contact-a.png";
+import { motion } from "framer-motion";
+import { textAnimation, wordAnimation, contentAnimation } from "@/utils/motion";
 
 const About = () => {
   return (
@@ -12,11 +14,21 @@ const About = () => {
           <hr className="border-[#686868] border-b-0 opacity-50 my-3" />
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between">
-          <h2 className="font-raleway text-[60px] md:text-[96px] font-[800] leading-[70px] flex basis-1/3 mt-5 mb-[20px] lg:mb-[50px]">
+        <div className="flex flex-col md:flex-row justify-between overflow-hidden">
+          <motion.h2
+            variants={wordAnimation}
+            initial={"initial"}
+            whileInView={"animate"}
+            className="font-raleway text-[60px] md:text-[96px] font-[800] leading-[70px] flex basis-1/3 mt-5 mb-[20px] lg:mb-[50px]"
+          >
             let's talk
-          </h2>
-          <p className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3">
+          </motion.h2>
+          <motion.p
+            variants={textAnimation}
+            initial={"initial"}
+            whileInView={"animate"}
+            className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
+          >
             We would love to hear from you! At Mate Studio, we believe that
             communication is key to the success of any project. Whether you have
             questions about our services or would like to discuss a potential
@@ -26,11 +38,17 @@ const About = () => {
             At Mate Studio, we are committed to delivering exceptional service
             and building lasting relationships with our clients. We look forward
             to hearing from you and helping you achieve your online goals.
-          </p>
+          </motion.p>
         </div>
       </div>
 
-      <div className="mt-[50px] grid grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]">
+      <motion.div
+        variants={contentAnimation}
+        initial={"initial"}
+        whileInView={"animate"}
+        viewport={{ once: true }}
+        className="mt-[50px] grid grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]"
+      >
         <div className="bg-[#E1E1DC] h-auto md:h-[550px] col-span-2 rounded-xl lg:rounded-r-none">
           <form className="p-[25px] grid grid-rows-4 md:grid-rows-3">
             <p className="font-raleway text-[52px] md:text-[64px] leading-[64px] md:leading-[75px] row-span-1">
@@ -81,7 +99,7 @@ const About = () => {
         <div className="hidden lg:block">
           <Image src={aLetter} className="h-[550px] object-cover" />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

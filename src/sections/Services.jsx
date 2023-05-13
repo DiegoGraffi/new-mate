@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { services } from "@/constants";
 import Image from "next/image";
-import ServiceDesign from "../../public/services-design.jpg";
 import { motion, AnimatePresence } from "framer-motion";
+import { textAnimation, wordAnimation, contentAnimation } from "@/utils/motion";
 
 const Services = () => {
   const [activo, setActivo] = useState(0);
   const servicioActivo = services[activo];
+
   return (
     <section className="h-auto max-w-[1536px] mx-auto p-[25px] lg:mt-[100px]">
       <div className="flex flex-col justify-between ">
@@ -17,21 +18,37 @@ const Services = () => {
           <hr className="border-[#686868] border-b-0 opacity-50 my-3" />
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between">
-          <h2 className="font-raleway text-[60px] mb-5 md:text-[96px] font-[800] leading-[50px] flex basis-1/3 mt-5">
+        <div className="flex flex-col md:flex-row justify-between overflow-hidden">
+          <motion.h2
+            variants={wordAnimation}
+            initial={"initial"}
+            whileInView={"animate"}
+            className="font-raleway text-[60px] mb-5 md:text-[96px] font-[800] leading-[50px] flex basis-1/3 mt-5"
+          >
             services
-          </h2>
-          <p className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3">
+          </motion.h2>
+          <motion.p
+            variants={textAnimation}
+            initial={"initial"}
+            whileInView={"animate"}
+            className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
+          >
             We offer a comprehensive range of web design and development
             services to help businesses succeed online. Whether you need a new
             website or want to revamp your existing one, we have the expertise
             to deliver results.
-          </p>
+          </motion.p>
         </div>
       </div>
 
       <AnimatePresence>
-        <div className="grid grid-cols-1 grid-rows-6 lg:grid-cols-4 lg:grid-rows-1 mt-[50px] lg:mt-[100px] relative h-[600px] md:h-[900px] lg:h-[700px]">
+        <motion.div
+          variants={contentAnimation}
+          initial={"initial"}
+          whileInView={"animate"}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 grid-rows-6 lg:grid-cols-4 lg:grid-rows-1 mt-[50px] lg:mt-[100px] relative h-[600px] md:h-[900px] lg:h-[700px]"
+        >
           <div className="flex text-center mb-0  lg:mb-0 lg:text-right justify-center lg:justify-end  lg:p-[25px] items-center ">
             <ul className="flex lg:flex-col ">
               <li
@@ -61,9 +78,10 @@ const Services = () => {
           <div className="grid col-span-1 lg:col-span-2 row-span-2 lg:row-span-1 overflow-hidden relative">
             <motion.div
               key={activo}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ x: 100 }}
+              animate={{ x: 0 }}
+              transition={{ type: "spring", duration: 0.3 }}
+              exit={{ x: -100 }}
             >
               <Image
                 src={servicioActivo.imgUrl}
@@ -74,13 +92,20 @@ const Services = () => {
           </div>
 
           <div className="grid row-span-3 p-[25px] justify-between  bg-[#E1E1DC] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-tr-xl ">
-            <div className="flex justify-center h-full items-center">
+            <motion.div
+              key={activo}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              transition={{ type: "spring", duration: 0.8 }}
+              exit={{ scale: 0.8 }}
+              className="flex justify-center h-full items-center"
+            >
               <p className="font-raleway text-[16px] font-[200] text-[#686868] text-justify ">
                 {servicioActivo.text}
               </p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </AnimatePresence>
     </section>
   );

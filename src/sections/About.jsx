@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { about } from "../constants/index";
 import AboutCard from "@/components/AboutCard";
+import { motion } from "framer-motion";
+import { wordAnimation, textAnimation, contentAnimation } from "@/utils/motion";
 
 const About = () => {
   const [active, setActive] = useState("about-1");
@@ -15,21 +17,37 @@ const About = () => {
           <hr className="border-[#686868] border-b-0 opacity-50 my-3" />
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between">
-          <h2 className="font-raleway text-[60px] md:text-[96px] font-[800] leading-[70px] flex basis-1/3 mt-5 mb-[20px] lg:mb-[50px]">
+        <div className="flex flex-col md:flex-row justify-between overflow-hidden">
+          <motion.h2
+            variants={wordAnimation}
+            initial={"initial"}
+            whileInView={"animate"}
+            className="font-raleway text-[60px] md:text-[96px] font-[800] leading-[70px] flex basis-1/3 mt-5 mb-[20px] lg:mb-[50px]"
+          >
             about us
-          </h2>
-          <p className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3">
+          </motion.h2>
+          <motion.p
+            variants={textAnimation}
+            initial={"initial"}
+            whileInView={"animate"}
+            className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
+          >
             At Mate Studio, we are more than just a web design and development
             company, we are a team of passionate professionals who are dedicated
             to delivering exceptional service and creating lasting relationships
             with our clients. Our values are the foundation of everything we do,
             and we strive to live up to them every day.
-          </p>
+          </motion.p>
         </div>
       </div>
 
-      <div className="mt-[50px] flex lg:flex-row flex-col min-h-[1000px] lg:min-h-[70vh] gap-5">
+      <motion.div
+        variants={contentAnimation}
+        initial={"initial"}
+        whileInView={"animate"}
+        viewport={{ once: true }}
+        className="mt-[50px] flex lg:flex-row flex-col min-h-[1000px] lg:min-h-[70vh] gap-5"
+      >
         {about.map((body, index) => (
           <AboutCard
             key={body.id}
@@ -40,7 +58,7 @@ const About = () => {
             text={body.text}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
