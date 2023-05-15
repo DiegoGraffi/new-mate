@@ -9,7 +9,7 @@ const Services = () => {
   const servicioActivo = services[activo];
 
   return (
-    <section className="h-auto max-w-[1536px] mx-auto p-[25px] lg:mt-[100px]">
+    <section className="h-auto max-w-[1536px] mx-auto p-[25px] lg:mt-[px]">
       <div className="flex flex-col justify-between ">
         <div className="w-[120px]">
           <p className="font-raleway text-[20px] text-[#686868] font-[200]">
@@ -80,7 +80,7 @@ const Services = () => {
               key={activo}
               initial={{ x: 100 }}
               animate={{ x: 0 }}
-              transition={{ type: "spring", duration: 0.3 }}
+              transition={{ type: "tween", duration: 0.5 }}
               exit={{ x: -100 }}
             >
               <Image

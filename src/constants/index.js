@@ -1,3 +1,34 @@
+export const projects = [
+  {
+    id: "project-1",
+    number: "01",
+    imgUrl: require("../../public/plan.jpg"),
+    title: "Plan Sonrisas",
+    text: "Sed maximus, enim sit amet egestas aliquam, arcu ante tempor eros, ut ornare nibh massa id nisi. Nullam tincidunt eu enim sed iaculis. Cras aliquam eros vel leo eleifend, nec blandit dolor gravida. Cras sodales tortor eleifend fringilla viverra.",
+  },
+  {
+    id: "project-2",
+    number: "02",
+    imgUrl: require("../../public/work2.png"),
+    title: "Alicja Gancarz",
+    text: "Donec nec risus convallis, euismod diam vel, venenatis dolor. Fusce non ultricies augue. Aenean fringilla velit in libero commodo pellentesque. Ut vehicula enim eu porttitor luctus. Fusce scelerisque hendrerit ipsum a posuere. Etiam rhoncus lectus sapien, in convallis sapien bibendum eu. ",
+  },
+  {
+    id: "project-3",
+    number: "03",
+    imgUrl: require("../../public/work3.png"),
+    title: "Claniz",
+    text: "Mauris ornare, lorem hendrerit venenatis dictum, magna lorem imperdiet eros, vel aliquet mi orci quis tellus. Cras sagittis nisi a nibh facilisis ornare. Ut et diam id tellus volutpat mollis a sit amet neque. Phasellus elementum euismod nunc, rutrum pharetra nisl rhoncus sit amet. ",
+  },
+  {
+    id: "project-4",
+    number: "04",
+    imgUrl: require("../../public/work4.png"),
+    title: "Tiny Houses",
+    text: "Praesent non nulla scelerisque, ultricies nunc non, condimentum eros. Curabitur euismod enim ultricies, vulputate ex sed, sagittis purus. Morbi auctor, enim vel volutpat lobortis, odio elit pellentesque neque, et elementum risus justo nec neque. Praesent id lobortis nibh. Integer dictum ante nec erat tristique ornare.",
+  },
+];
+
 export const about = [
   {
     id: "about-1",

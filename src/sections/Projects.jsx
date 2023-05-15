@@ -1,8 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import Image from "next/image";
 import work1 from "../../public/work1.png";
 import { motion } from "framer-motion";
-import { RxArrowBottomRight } from "react-icons/rx";
+import { projects, AnimatePresence } from "@/constants";
 import {
   wordAnimation,
   textAnimation,
@@ -11,9 +11,12 @@ import {
 } from "@/utils/motion";
 
 const Projects = () => {
+  const [activo, setActivo] = useState(0);
+  const proyectoActivo = projects[activo];
+
   return (
-    <section className="h-auto md:max-w-[1536px] mx-auto p-[25px] mt-[30px]">
-      <div className="flex flex-col justify-between overflow-hidden">
+    <section className="h-auto md:max-w-[1536px] mx-auto p-[25px] mt-[10px] lg:mt-[30px]">
+      <div className="flex flex-col justify-between overflow-hidden ">
         <motion.div
           variants={sectionName}
           initial={"initial"}
@@ -58,30 +61,24 @@ const Projects = () => {
         initial={"initial"}
         whileInView={"animate"}
         viewport={{ once: true }}
-        className="flex flex-col lg:flex-row gap-0 mt-[50px] relative "
+        className="flex flex-col lg:flex-row gap-0 mt-[50px] relative"
       >
         <div className="flex max-h-[700px] ">
           <Image
-            src={work1}
+            src={proyectoActivo.imgUrl}
+            fill
             className="object-cover saturate-100 rounded-tr-xl lg:rounded-tr-none rounded-tl-xl lg:rounded-tl-xl lg:rounded-bl-xl"
           />
         </div>
 
-        {/* <RxArrowBottomRight className="bg-white text-[#686868] h-[80px] w-[80px] p-5 absolute left-[65%] bottom-[20%] rounded-full" /> */}
-
         <div className="flex basis-2/4 flex-col flex-grow p-[25px] justify-between bg-[#E1E1DC] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
           <div className="flex flex-col gap-5">
             <span className="font-raleway text-[40px] text-[#686868] font-[200]">
-              project name
+              {proyectoActivo.title}
             </span>
             <hr className="border-[#686868]" />
             <p className="font-raleway text-[16px] font-[200] text-[#686868] text-justify mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              luctus felis sit amet diam interdum rutrum. Orci varius natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Sed tincidunt cursus est, rutrum malesuada mi mollis vel. Morbi
-              nec risus sit amet nisi scelerisque tristique nec nec lorem. Nunc
-              quis quam lectus. Nunc tempor neque nibh.
+              {proyectoActivo.text}
             </p>
           </div>
 
@@ -92,14 +89,36 @@ const Projects = () => {
         </div>
       </motion.div>
 
-      <div className="flex justify-between mt-[25px] ">
-        <p className="font-raleway text-[#686868] text-[26px] font-[200] cursor-pointer px-5 py-2 transition-all duration-150 ease-in-out hover:bg-[#E1E1DC]">
-          prev
-        </p>
-        <p className="font-raleway text-[#686868] text-[26px] font-[200] cursor-pointer px-5 py-2 transition-all duration-150 ease-in-out hover:bg-[#E1E1DC]">
-          next
-        </p>
-      </div>
+      <ul className="flex justify-between w-[100%]">
+        <li
+          onMouseEnter={() => setActivo(0)}
+          onClick={() => setActivo(0)}
+          className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
+        >
+          01
+        </li>
+        <li
+          onMouseEnter={() => setActivo(1)}
+          onClick={() => setActivo(1)}
+          className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
+        >
+          02
+        </li>
+        <li
+          onMouseEnter={() => setActivo(2)}
+          onClick={() => setActivo(2)}
+          className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
+        >
+          03
+        </li>
+        <li
+          onMouseEnter={() => setActivo(3)}
+          onClick={() => setActivo(3)}
+          className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
+        >
+          04
+        </li>
+      </ul>
     </section>
   );
 };
