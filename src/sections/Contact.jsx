@@ -49,7 +49,7 @@ const About = () => {
         viewport={{ once: true }}
         className="mt-[50px]  grid grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]"
       >
-        <div className="bg-[#E1E1DC] h-auto md:h-[550px] col-span-2 rounded-xl lg:rounded-r-none">
+        <div className="bg-[#E1E1DC] h-auto md:h-[600px] col-span-2 rounded-xl lg:rounded-r-none">
           <form className="p-[25px] grid grid-rows-4 md:grid-rows-3">
             <p className="font-raleway text-[52px] md:text-[64px] leading-[64px] md:leading-[75px] row-span-1">
               say <br />
@@ -97,7 +97,7 @@ const About = () => {
           </form>
         </div>
         <div className="hidden lg:block">
-          <Image src={aLetter} className="h-[550px] object-cover" />
+          <Image src={aLetter} className="h-[600px] object-cover" />
         </div>
       </motion.div>
     </section>
