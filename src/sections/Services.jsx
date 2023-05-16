@@ -75,7 +75,7 @@ const Services = () => {
             </ul>
           </div>
 
-          <div className="grid col-span-1 lg:col-span-2 row-span-2 lg:row-span-1 overflow-hidden relative">
+          <div className="grid col-span-1 lg:col-span-2 row-span-2 lg:row-span-1 overflow-hidden relative border-[1px] border-black rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl">
             <motion.div
               key={activo}
               initial={{ x: 100 }}
@@ -91,7 +91,7 @@ const Services = () => {
             </motion.div>
           </div>
 
-          <div className="grid row-span-3 p-[25px] justify-between  bg-[#E1E1DC] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-tr-xl ">
+          <div className="grid row-span-3 p-[25px] justify-between  bg-[#E1E1DC] border-x-[1px] border-b-[1px] border-black lg:border-y-[1px] md:border-r-[1px] lg:border-l-[0px] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-tr-xl ">
             <motion.div
               key={activo}
               initial={{ scale: 0.8 }}

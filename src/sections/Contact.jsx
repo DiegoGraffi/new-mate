@@ -47,7 +47,7 @@ const About = () => {
         initial={"initial"}
         whileInView={"animate"}
         viewport={{ once: true }}
-        className="mt-[50px] grid grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]"
+        className="mt-[50px]  grid grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]"
       >
         <div className="bg-[#E1E1DC] h-auto md:h-[550px] col-span-2 rounded-xl lg:rounded-r-none">
           <form className="p-[25px] grid grid-rows-4 md:grid-rows-3">
@@ -63,7 +63,7 @@ const About = () => {
                   <input
                     type="text"
                     placeholder="your name"
-                    className="placeholder:font-raleway bg-[#E1E1DC] focus:outline-none border-b-[0.5px] border-[#686868] mr-7"
+                    className="placeholder:font-raleway bg-[#E1E1DC] focus:outline-none border-b-[0.5px] border-[#686868] mt-[10px] lg:mr-7"
                   />
                 </div>
 
@@ -72,7 +72,7 @@ const About = () => {
                   <input
                     type="email"
                     placeholder="your email"
-                    className="placeholder:font-raleway bg-[#E1E1DC] focus:outline-none border-b-[0.5px] border-[#686868] mr-7"
+                    className="placeholder:font-raleway bg-[#E1E1DC] focus:outline-none border-b-[0.5px] border-[#686868] mt-[10px] lg:mr-7"
                   />
                 </div>
               </div>
@@ -82,7 +82,7 @@ const About = () => {
                 <textarea
                   rows={4}
                   placeholder="start typing here"
-                  className="placeholder:font-raleway bg-[#E1E1DC] focus:outline-none border-b-[0.5px] border-[#686868] mr-7"
+                  className="placeholder:font-raleway bg-[#E1E1DC] focus:outline-none border-b-[0.5px] border-[#686868] mt-[10px] lg:mr-7"
                 />
               </div>
             </div>
@@ -90,7 +90,7 @@ const About = () => {
             <div className="flex flex-col md:flex-row items-center justify-between md:items-baseline mt-[35px] row-span-1">
               <p className="font-raleway">matestudio.webdev@gmail.com</p>
 
-              <div className="h-[90px] w-[90px] bg-white p-2 flex items-end mt-[25px] md:mt-0">
+              <div className="h-[90px] w-[90px] rounded-xl bg-white p-2 flex items-end mt-[25px] md:mt-0 hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer">
                 <p className="font-raleway">send.</p>
               </div>
             </div>

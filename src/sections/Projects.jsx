@@ -61,19 +61,18 @@ const Projects = () => {
         initial={"initial"}
         whileInView={"animate"}
         viewport={{ once: true }}
-        className="flex flex-col lg:flex-row gap-0 mt-[50px] relative"
+        className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] border-[1px] rounded-xl border-black"
       >
-        <div className="flex max-h-[700px] ">
+        <div className="flex basis-[60%]">
           <Image
             src={proyectoActivo.imgUrl}
-            fill
             className="object-cover saturate-100 rounded-tr-xl lg:rounded-tr-none rounded-tl-xl lg:rounded-tl-xl lg:rounded-bl-xl"
           />
         </div>
 
-        <div className="flex basis-2/4 flex-col flex-grow p-[25px] justify-between bg-[#E1E1DC] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
+        <div className="flex basis-[40%] border-t-[1px] lg:border-t-0 lg:border-l-[1px] border-black flex-col p-[25px] justify-between bg-[#E1E1DC] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
           <div className="flex flex-col gap-5">
-            <span className="font-raleway text-[40px] text-[#686868] font-[200]">
+            <span className="font-raleway text-[30px] md:text-[40px] text-[#686868] font-[200]">
               {proyectoActivo.title}
             </span>
             <hr className="border-[#686868]" />
@@ -82,14 +81,15 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="text-[16px] text-[#686868] font-[200] text-justify leading-[19px] mt-[30px] flex justify-between">
-            <span className="font-raleway">dec.05.21</span>
-            <span className="font-raleway">03</span>
-          </div>
+          <a target="_blank" href={proyectoActivo.link}>
+            <div className="flex justify-center mt-[20px] border-black border-[1px] text-black font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-[black] hover:text-[#E1E1DC] transition-all duration-150 ease-in-out cursor-pointer">
+              visit
+            </div>
+          </a>
         </div>
       </motion.div>
 
-      <ul className="flex justify-between w-[100%]">
+      <ul className="flex justify-between w-[100%] mt-[20px]">
         <li
           onMouseEnter={() => setActivo(0)}
           onClick={() => setActivo(0)}
