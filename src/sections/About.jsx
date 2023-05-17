@@ -32,11 +32,13 @@ const About = () => {
             whileInView={"animate"}
             className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
           >
-            At Mate Studio, we are more than just a web design and development
-            company, we are a team of passionate professionals who are dedicated
-            to delivering exceptional service and creating lasting relationships
-            with our clients. Our values are the foundation of everything we do,
-            and we strive to live up to them every day.
+            We are Mate Studio, a digital agency based in San Juan, Argentina
+            and London, UK. We are a passionate and dedicated team of web
+            developers committed to delivering exceptional digital solutions.
+            <br />
+            Our team specialize in creating innovative and high-performance
+            websites and digital experiences that help businesses thrive in the
+            online world.
           </motion.p>
         </div>
       </div>
