@@ -61,16 +61,17 @@ const Projects = () => {
         initial={"initial"}
         whileInView={"animate"}
         viewport={{ once: true }}
-        className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] border-[1px] rounded-xl border-black"
+        className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] rounded-xl"
       >
-        <div className="flex basis-[60%]">
+        <div className="flex basis-[60%] relative">
           <Image
             src={proyectoActivo.imgUrl}
+            fill
             className="object-cover saturate-100 rounded-tr-xl lg:rounded-tr-none rounded-tl-xl lg:rounded-tl-xl lg:rounded-bl-xl"
           />
         </div>
 
-        <div className="flex basis-[40%] border-t-[1px] lg:border-t-0 lg:border-l-[1px] border-black flex-col p-[25px] justify-between bg-[#E1E1DC] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
+        <div className="flex basis-[40%]  flex-col p-[25px] justify-between bg-[#E1E1DC] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
           <div className="flex flex-col gap-5">
             <span className="font-raleway text-[30px] md:text-[40px] text-[#686868] font-[200]">
               {proyectoActivo.title}
@@ -82,7 +83,7 @@ const Projects = () => {
           </div>
 
           <a target="_blank" href={proyectoActivo.link}>
-            <div className="flex justify-center mt-[20px] border-black border-[1px] text-black font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-[black] hover:text-[#E1E1DC] transition-all duration-150 ease-in-out cursor-pointer">
+            <div className="flex justify-center mt-[20px] bg-[#686868] text-[#E1E1DC] font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-[black] hover:text-[#E1E1DC] transition-all duration-150 ease-in-out cursor-pointer">
               visit
             </div>
           </a>
