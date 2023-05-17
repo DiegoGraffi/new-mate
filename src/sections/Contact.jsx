@@ -5,7 +5,10 @@ import { textAnimation, wordAnimation, contentAnimation } from "@/utils/motion";
 
 const About = () => {
   return (
-    <section className="h-[100vh] max-w-[1536px] mx-auto p-[25px] mt-[25px] lg:mt-[25px] ">
+    <section
+      id="contact"
+      className="h-[100vh] max-w-[1536px] mx-auto p-[25px] mt-[25px] lg:mt-[25px] "
+    >
       <div className="flex flex-col justify-between ">
         <div className="w-[120px]">
           <p className="font-raleway text-[20px] text-[#686868] font-[200]">
