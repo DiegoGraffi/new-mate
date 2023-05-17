@@ -56,16 +56,16 @@ export const services = [
   {
     id: "services-01",
     imgUrl: require("../../public/services-design.jpg"),
-    text: "We create visually stunning and user-friendly websites that are tailored to your brand and target audience. Our designs are responsive, ensuring that your website looks great on any device.",
+    text: "With so many websites available online, it's crucial your website stands. We design visually appealing, user-friendly, and optimized websites for both desktop and mobile devices. Our carefully crafted websites can help you attract visitors, increase engagement, and achieve your business goals.",
   },
   {
     id: "services-02",
     imgUrl: require("../../public/services-prototyping.jpg"),
-    text: "Lightweight or fully-functional prototypes give a user a testable sense of the product and help to validate concepts and ideas before using expensive development resources. We believe its the best way to design and create great products.",
+    text: "We use Figma to create a preliminary version of your business's website. This web prototype serves as a working model of the final product and allows developers, designers and clients test the functionality, layout, and user experience of your site before it is launched.",
   },
   {
     id: "services-01",
     imgUrl: require("../../public/services-development.jpg"),
-    text: "We provide development services using the latest standards and best practices to bring your digital products to life.",
+    text: "We create websites combining eye-catching design, legible code and implementing various elements to bring a website to life. We seek for your web page to deliver functional, user-friendly, and visually appealing online experiences.",
   },
 ];

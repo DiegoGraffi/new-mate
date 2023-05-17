@@ -33,10 +33,9 @@ const Services = () => {
             whileInView={"animate"}
             className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
           >
-            We offer a comprehensive range of web design and development
-            services to help businesses succeed online. Whether you need a new
-            website or want to revamp your existing one, we have the expertise
-            to deliver results.
+            Mate Studio provides a full range of custom software development
+            services. To reach your business goals and deliver the best User
+            Experiences, we build unique and durable websites for our clients.
           </motion.p>
         </div>
       </div>
