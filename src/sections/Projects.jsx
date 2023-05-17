@@ -63,7 +63,7 @@ const Projects = () => {
         viewport={{ once: true }}
         className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] rounded-xl"
       >
-        <div className="flex basis-[60%] relative">
+        <div className="flex basis-[60%] relative aspect-video lg:aspect-auto">
           <Image
             src={proyectoActivo.imgUrl}
             fill
