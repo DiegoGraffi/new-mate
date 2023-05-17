@@ -19,6 +19,7 @@ const About = () => {
             variants={wordAnimation}
             initial={"initial"}
             whileInView={"animate"}
+            viewport={{ once: true }}
             className="font-raleway text-[60px] md:text-[96px] font-[800] leading-[70px] flex basis-1/3 mt-5 mb-[20px] lg:mb-[50px]"
           >
             let's talk
@@ -27,6 +28,7 @@ const About = () => {
             variants={textAnimation}
             initial={"initial"}
             whileInView={"animate"}
+            viewport={{ once: true }}
             className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
           >
             We would love to hear from you! At Mate Studio, we believe that
