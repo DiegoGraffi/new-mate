@@ -23,6 +23,7 @@ const Services = () => {
             variants={wordAnimation}
             initial={"initial"}
             whileInView={"animate"}
+            viewport={{ once: true }}
             className="font-raleway text-[60px] mb-5 md:text-[96px] font-[800] leading-[50px] flex basis-1/3 mt-5"
           >
             services
@@ -31,6 +32,7 @@ const Services = () => {
             variants={textAnimation}
             initial={"initial"}
             whileInView={"animate"}
+            viewport={{ once: true }}
             className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
           >
             Mate Studio provides a full range of custom software development

@@ -21,6 +21,7 @@ const Projects = () => {
           variants={sectionName}
           initial={"initial"}
           whileInView={"animate"}
+          viewport={{ once: true }}
           className="w-[100px]"
         >
           <p className="font-raleway text-[20px] text-[#686868] font-[200]">
@@ -34,6 +35,7 @@ const Projects = () => {
             variants={wordAnimation}
             initial={"initial"}
             whileInView={"animate"}
+            viewport={{ once: true }}
             className="font-raleway text-[60px] mb-8 md:text-[96px] font-[800] md:leading-[50px] flex md:basis-1/3 md:mt-5"
           >
             projects
@@ -42,6 +44,7 @@ const Projects = () => {
             variants={textAnimation}
             initial={"initial"}
             whileInView={"animate"}
+            viewport={{ once: true }}
             className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
           >
             Take a look at our latest work in UI/UX design and website design
