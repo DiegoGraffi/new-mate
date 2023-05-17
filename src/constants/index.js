@@ -36,13 +36,13 @@ export const about = [
     id: "about-1",
     imgUrl: require("../../public/about-creatives.png"),
     title: "creatives",
-    text: "At Mate Studio, creativity is at the core of everything we do. Our team of designers and developers are passionate about pushing the boundaries of design and technology to create innovative solutions that meet our clients needs. We believe that creativity is the key to success in the digital world, and we are constantly exploring new ideas and experimenting with new techniques to deliver solutions that stand out. From the initial concept to the final product, we approach every project with a creative mindset, ensuring that our clients receive solutions that are not only beautiful and functional but also unique and engaging.",
+    text: "In a crowded online marketplace, we create unique and engaging designs that allows our client's brand to stand out from the competition and leave a memorable impression on their users. MateStudio build user-centric interfaces that are easy to navigate, intuitive to use, and provide a delightful overall experience.",
   },
   {
     id: "about-2",
     imgUrl: require("../../public/about-learners.jpg"),
     title: "learners",
-    text: "We value continuous learning and growth. Our team of designers and developers are committed to staying up-to-date with the latest industry trends and technologies to deliver innovative solutions that meet our clients needs.",
+    text: "We know it's a cliché, but we love what we do - we will always do our best to self-improve -. We like staying updated with new technologies, web development trends, and develop flexible web solutions that can easily adapt to changing client needs and industry developments.",
   },
   {
     id: "about-3",
