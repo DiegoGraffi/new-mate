@@ -8,7 +8,10 @@ const About = () => {
   const [active, setActive] = useState("about-1");
 
   return (
-    <section className="h-auto max-w-[1536px] mx-auto p-[25px] mt-[25px] lg:mt-[25px]">
+    <section
+      id="about"
+      className="h-auto max-w-[1536px] mx-auto p-[25px] mt-[25px] lg:mt-[25px]"
+    >
       <div className="flex flex-col justify-between ">
         <div className="w-[120px]">
           <p className="font-raleway text-[20px] text-[#686868] font-[200]">

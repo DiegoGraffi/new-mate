@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import letter from "../../public/a-letter.png";
 import HeroBan from "../../public/fondo.jpg";
 import logo from "../../public/logo-mate.png";
@@ -27,26 +28,42 @@ const Hero = () => {
           </div>
 
           <ul className="hidden md:flex justify-between gap-[3px] ">
-            <a className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm rounded-l-xl hover:px-10">
+            <Link
+              href="#projects"
+              scroll={false}
+              className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm rounded-l-xl hover:px-10"
+            >
               <li className="font-raleway font-[400] text-[#686868]">
                 projects
               </li>
-            </a>
-            <a className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm hover:px-10">
+            </Link>
+            <Link
+              href="#services"
+              scroll={false}
+              className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm hover:px-10"
+            >
               <li className="font-raleway font-[400] text-[#686868]">
                 services
               </li>
-            </a>
-            <a className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm hover:px-10">
+            </Link>
+            <Link
+              href="#about"
+              scroll={false}
+              className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm hover:px-10"
+            >
               <li className="font-raleway font-[400] text-[#686868]">
                 about us
               </li>
-            </a>
-            <a className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm rounded-r-xl hover:px-10">
+            </Link>
+            <Link
+              href="#contact"
+              scroll={false}
+              className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm rounded-r-xl hover:px-10"
+            >
               <li className="font-raleway font-[400] text-[#686868]">
                 contact
               </li>
-            </a>
+            </Link>
           </ul>
         </div>
 

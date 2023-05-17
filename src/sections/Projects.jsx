@@ -15,7 +15,10 @@ const Projects = () => {
   const proyectoActivo = projects[activo];
 
   return (
-    <section className="h-auto md:max-w-[1536px] mx-auto p-[25px] mt-[10px] lg:mt-[30px]">
+    <section
+      id="projects"
+      className="h-auto md:max-w-[1536px] mx-auto p-[25px] mt-[10px] lg:mt-[30px]"
+    >
       <div className="flex flex-col justify-between overflow-hidden ">
         <motion.div
           variants={sectionName}
