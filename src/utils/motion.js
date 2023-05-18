@@ -163,11 +163,11 @@ export const footerVariants = {
 export const wordAnimation = {
   initial: {
     opacity: 0,
-    y: 50,
+    y: "-100%",
   },
   animate: {
     opacity: 1,
-    y: 0,
+    y: "0%",
 
     transition: {
       ease: [0.6, 0.01, 0.05, 0.95],
@@ -179,11 +179,11 @@ export const wordAnimation = {
 export const textAnimation = {
   initial: {
     opacity: 0,
-    y: 50,
+    y: "-100%",
   },
   animate: {
     opacity: 1,
-    y: 0,
+    y: "0%",
 
     transition: {
       ease: [0.6, 0.01, 0.05, 0.95],
@@ -195,11 +195,11 @@ export const textAnimation = {
 export const sectionName = {
   initial: {
     opacity: 0,
-    y: -50,
+    y: "-100%",
   },
   animate: {
     opacity: 1,
-    y: 0,
+    y: "0%",
 
     transition: {
       ease: [0.6, 0.01, 0.05, 0.95],

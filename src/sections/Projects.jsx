@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Image from "next/image";
-import work1 from "../../public/work1.png";
 import { motion } from "framer-motion";
 import { projects, AnimatePresence } from "@/constants";
 import {
@@ -17,7 +16,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="h-auto md:max-w-[1536px] mx-auto p-[25px] mt-[10px] lg:mt-[30px]"
+      className="h-auto md:max-w-[1536px] mx-auto p-[25px] md:mt-[10px] lg:mt-[30px]"
     >
       <div className="flex flex-col justify-between overflow-hidden ">
         <motion.div
