@@ -46,8 +46,8 @@ const Projects = () => {
           <motion.p
             variants={textAnimation}
             initial={"initial"}
-            whileInView={"animate"}
             viewport={{ once: true }}
+            whileInView={"animate"}
             className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
           >
             Take a look at our latest work in UI/UX design and website design
