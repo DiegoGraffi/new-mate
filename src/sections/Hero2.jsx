@@ -1,11 +1,20 @@
-import React from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import letter from "../../public/a-letter.png";
 import HeroBan from "../../public/fondo.jpg";
 import logo from "../../public/logo-mate.png";
+import { MenuIcon, X, XIcon } from "lucide-react";
 
 const Hero = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function abrirMenu() {
+    setMenuOpen(!menuOpen);
+  }
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <div>
       <Image
@@ -26,6 +35,20 @@ const Hero = () => {
               priority
             />
           </div>
+
+          {menuOpen ? (
+            <XIcon
+              className="md:hidden text-[#F4F4EE]"
+              size={20}
+              onClick={abrirMenu}
+            />
+          ) : (
+            <MenuIcon
+              className="md:hidden text-[#F4F4EE]"
+              size={20}
+              onClick={closeMenu}
+            />
+          )}
 
           <ul className="hidden md:flex justify-between gap-[3px] ">
             <Link
