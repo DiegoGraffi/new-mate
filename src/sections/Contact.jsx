@@ -34,15 +34,12 @@ const About = () => {
             viewport={{ once: true }}
             className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
           >
-            We would love to hear from you! At Mate Studio, we believe that
-            communication is key to the success of any project. Whether you have
-            questions about our services or would like to discuss a potential
-            project, we are here to help.
+            Let's bring about AWE-inspiring results together!
             <br />
             <br />
-            At Mate Studio, we are committed to delivering exceptional service
-            and building lasting relationships with our clients. We look forward
-            to hearing from you and helping you achieve your online goals.
+            If you have any questions about our services or want to talk about a
+            possible project, feel free to reach out. We're here to assist you
+            and would love to hear from you!
           </motion.p>
         </div>
       </div>
