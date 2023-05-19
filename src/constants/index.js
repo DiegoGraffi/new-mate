@@ -48,7 +48,7 @@ export const about = [
     id: "about-3",
     imgUrl: require("../../public/about-communicators.png"),
     title: "communicators",
-    text: "Communication is key to the success of any project, and we strive to keep our clients informed every step of the way. We are responsive to our clients needs and questions, and we provide regular updates on the progress of their projects. By prioritizing clear communication, we are able to build strong relationships with our clients and deliver solutions that meet their needs and exceed their expectations.",
+    text: "Open and transparent communication is crucial for the successful execution of any project, and our commitment is to ensure that our clients are kept informed and involved at every stage of the journey - we encourage teamwork with our clients! -. We start every new projetc understanding our client's requirements and objectives. We take the time to listen, analyze, and strategize in order to develop tailored solutions that align with your brand identity and business goals. Our client-centric approach ensures that your website or web application reflects your values, engages your target audience, and helps you stand out in a competitive digital landscape.",
   },
 ];
 
