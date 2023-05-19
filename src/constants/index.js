@@ -48,7 +48,7 @@ export const about = [
     id: "about-3",
     imgUrl: require("../../public/about-communicators.png"),
     title: "communicators",
-    text: "We believe that effective communication is key to the success of any project, and we strive to keep our clients informed every step of the way. We are responsive to our clients needs and questions, and we provide regular updates on the progress of their projects. By prioritizing clear communication, we are able to build strong relationships with our clients and deliver solutions that meet their needs and exceed their expectations.",
+    text: "Communication is key to the success of any project, and we strive to keep our clients informed every step of the way. We are responsive to our clients needs and questions, and we provide regular updates on the progress of their projects. By prioritizing clear communication, we are able to build strong relationships with our clients and deliver solutions that meet their needs and exceed their expectations.",
   },
 ];
 
@@ -56,7 +56,7 @@ export const services = [
   {
     id: "services-01",
     imgUrl: require("../../public/services-design.jpg"),
-    text: "With so many websites available online, it's crucial your website stands. We design visually appealing, user-friendly, and optimized websites for both desktop and mobile devices. Our carefully crafted websites can help you attract visitors, increase engagement, and achieve your business goals.",
+    text: "With so many websites available online, it's crucial your website stands out. We design visually appealing, user-friendly, and optimized websites for both desktop and mobile devices. Our carefully crafted websites can help you attract visitors, increase engagement, and achieve your business goals.",
   },
   {
     id: "services-02",
