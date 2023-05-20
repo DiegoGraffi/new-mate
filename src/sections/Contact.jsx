@@ -38,8 +38,7 @@ const About = () => {
             <br />
             <br />
             If you have any questions about our services or want to talk about a
-            possible project, feel free to reach out. We're here to assist you
-            and would love to hear from you!
+            possible project, feel free to reach out. We would love to hear from you!
           </motion.p>
         </div>
       </div>
