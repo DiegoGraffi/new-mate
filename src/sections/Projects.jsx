@@ -26,10 +26,10 @@ const Projects = () => {
           viewport={{ once: true }}
           className="w-[100px]"
         >
-          <p className="font-raleway text-[20px] text-[#686868] font-[200]">
+          <p className="font-raleway text-[20px] text-darkGrey font-[200]">
             our work
           </p>
-          <hr className="border-[#686868] border-b-0 opacity-50 my-3" />
+          <hr className="border-darkGrey border-b-0 opacity-50 my-3" />
         </motion.div>
 
         <div className="flex flex-col md:flex-row justify-between overflow-hidden">
@@ -47,7 +47,7 @@ const Projects = () => {
             initial={"initial"}
             viewport={{ once: true }}
             whileInView={"animate"}
-            className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
+            className="font-raleway text-[16px] text-darkGrey font-[400] text-justify leading-[19px] flex basis-1/3"
           >
             Take a look at our latest work in UI/UX design and website design
             and development.
@@ -66,23 +66,27 @@ const Projects = () => {
           <Image
             src={proyectoActivo.imgUrl}
             fill
-            className="object-cover saturate-100 rounded-tr-xl lg:rounded-tr-none rounded-tl-xl lg:rounded-tl-xl lg:rounded-bl-xl"
+            className="object-cover rounded-tr-xl lg:rounded-tr-none rounded-tl-xl lg:rounded-tl-xl lg:rounded-bl-xl"
           />
         </div>
 
-        <div className="flex basis-[40%]  flex-col p-[25px] justify-between bg-[#E1E1DC] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
+        <div className="flex basis-[40%]  flex-col p-[25px] justify-between bg-secondary rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
           <div className="flex flex-col gap-5">
-            <span className="font-raleway text-[30px] md:text-[40px] text-[#686868] font-[200]">
+            <span className="font-raleway text-[30px] md:text-[40px] text-darkGrey font-[200]">
               {proyectoActivo.title}
             </span>
-            <hr className="border-[#686868]" />
-            <p className="font-raleway text-[16px] font-[200] text-[#686868] text-justify mt-5">
+            <hr className="border-darkGrey" />
+            <p className="font-raleway text-[16px] font-[400] text-darkGrey text-justify mt-5">
               {proyectoActivo.text}
             </p>
           </div>
 
-          <a target="_blank" href={proyectoActivo.link}>
-            <div className="flex justify-center mt-[20px] bg-[#686868] text-[#E1E1DC] font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-[black] hover:text-[#E1E1DC] transition-all duration-150 ease-in-out cursor-pointer">
+          <a
+            target="_blank"
+            href={proyectoActivo.link}
+            className="flex justify-end"
+          >
+            <div className="flex justify-start items-end w-[60px] md:w-[100px] h-[60px] md:h-[100px] mt-[40px] bg-principal text-darkGrey font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-violet hover:text-principal hover:text-principaltransition-all duration-150 ease-in-out cursor-pointer">
               visit
             </div>
           </a>

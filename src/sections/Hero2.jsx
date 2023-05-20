@@ -6,7 +6,7 @@ import letter from "../../public/a-letter.png";
 import letterB from "../../public/a-letter-black.png";
 import HeroBan from "../../public/fondo.jpg";
 import logo from "../../public/logo-mate.png";
-import { MenuIcon, X, XIcon } from "lucide-react";
+import { MenuIcon, XIcon } from "lucide-react";
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -15,10 +15,10 @@ const Services = () => {
     >
       <div className="flex flex-col justify-between ">
         <div className="w-[120px]">
-          <p className="font-raleway text-[20px] text-[#686868] font-[200]">
+          <p className="font-raleway text-[20px] text-darkGrey font-[200]">
             what we do?
           </p>
-          <hr className="border-[#686868] border-b-0 opacity-50 my-3" />
+          <hr className="border-darkGrey border-b-0 opacity-50 my-3" />
         </div>
 
         <div className="flex flex-col md:flex-row justify-between overflow-hidden">
@@ -36,7 +36,7 @@ const Services = () => {
             initial={"initial"}
             whileInView={"animate"}
             viewport={{ once: true }}
-            className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
+            className="font-raleway text-[16px] text-darkGrey font-[400] text-justify leading-[19px] flex basis-1/3"
           >
             Mate Studio provides a full range of custom software development
             services. To reach your business goals and deliver the best User
@@ -58,44 +58,46 @@ const Services = () => {
               <li
                 onMouseEnter={() => setActivo(0)}
                 onClick={() => setActivo(0)}
-                className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
+                className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-darkGrey"
               >
                 design
               </li>
               <li
                 onMouseEnter={() => setActivo(1)}
                 onClick={() => setActivo(1)}
-                className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
+                className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-darkGrey"
               >
                 prototyping
               </li>
               <li
                 onMouseEnter={() => setActivo(2)}
                 onClick={() => setActivo(2)}
-                className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
+                className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-darkGrey"
               >
                 development
               </li>
             </ul>
           </div>
 
-          <div className="grid col-span-1 lg:col-span-2 row-span-2 lg:row-span-1 overflow-hidden relative rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl">
-            <motion.div
-              key={activo}
-              initial={{ x: 100 }}
-              animate={{ x: 0 }}
-              transition={{ type: "tween", duration: 0.5 }}
-              exit={{ x: -100 }}
-            >
-              <Image
-                src={servicioActivo.imgUrl}
-                fill
-                className="h-full object-cover rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl"
-              />
-            </motion.div>
-          </div>
+          <AnimatePresence>
+            <div className="grid col-span-1 lg:col-span-2 row-span-2 lg:row-span-1 overflow-hidden relative rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl">
+              <motion.div
+                key={activo}
+                initial={{ x: 100 }}
+                animate={{ x: 0 }}
+                transition={{ type: "tween", duration: 0.5 }}
+                exit={{ x: -100, opacity: 0 }}
+              >
+                <Image
+                  src={servicioActivo.imgUrl}
+                  fill
+                  className="h-full object-cover rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl"
+                />
+              </motion.div>
+            </div>
+          </AnimatePresence>
 
-          <div className="grid row-span-3 p-[25px] justify-between  bg-[#E1E1DC] border-x-[1px] lg:border-y-[1px] md:border-r-[1px] lg:border-l-[0px] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-tr-xl ">
+          <div className="grid row-span-3 p-[25px] justify-between bg-secondary border-x-[1px] lg:border-y-[1px] md:border-r-[1px] lg:border-l-[0px] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-tr-xl ">
             <motion.div
               key={activo}
               initial={{ scale: 0.8 }}
@@ -104,7 +106,7 @@ const Services = () => {
               exit={{ scale: 0.8 }}
               className="flex justify-center h-full items-center"
             >
-              <p className="font-raleway text-[16px] font-[200] text-[#686868] text-justify ">
+              <p className="font-raleway text-[16px] font-[400] text-darkGrey text-justify ">
                 {servicioActivo.text}
               </p>
             </motion.div>

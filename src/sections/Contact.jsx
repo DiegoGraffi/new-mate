@@ -11,10 +11,10 @@ const About = () => {
     >
       <div className="flex flex-col justify-between ">
         <div className="w-[120px]">
-          <p className="font-raleway text-[20px] text-[#686868] font-[200]">
+          <p className="font-raleway text-[20px] text-darkGrey font-[200]">
             contact
           </p>
-          <hr className="border-[#686868] border-b-0 opacity-50 my-3" />
+          <hr className="border-darkGrey border-b-0 opacity-50 my-3" />
         </div>
 
         <div className="flex flex-col md:flex-row justify-between overflow-hidden">
@@ -32,7 +32,7 @@ const About = () => {
             initial={"initial"}
             whileInView={"animate"}
             viewport={{ once: true }}
-            className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
+            className="font-raleway text-[16px] text-darkGrey font-[400] text-justify leading-[19px] flex basis-1/3"
           >
             Let's bring about AWE-inspiring results together!
             <br />
@@ -51,7 +51,7 @@ const About = () => {
         viewport={{ once: true }}
         className="mt-[50px]  grid grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]"
       >
-        <div className="bg-[#E1E1DC] h-auto md:h-[600px] col-span-2 rounded-xl lg:rounded-r-none">
+        <div className="bg-secondary h-auto md:h-[600px] col-span-2 rounded-xl lg:rounded-r-none">
           <form className="p-[25px] grid grid-rows-4 md:grid-rows-3">
             <p className="font-raleway text-[52px] md:text-[64px] leading-[64px] md:leading-[75px] row-span-1">
               say <br />
@@ -65,7 +65,7 @@ const About = () => {
                   <input
                     type="text"
                     placeholder="your name"
-                    className="placeholder:font-raleway bg-[#E1E1DC] focus:outline-none border-b-[0.5px] border-[#686868] mt-[10px] lg:mr-7"
+                    className="placeholder:font-raleway bg-secondary focus:outline-none border-b-[0.5px] border-darkGrey mt-[10px] lg:mr-7"
                   />
                 </div>
 
@@ -74,7 +74,7 @@ const About = () => {
                   <input
                     type="email"
                     placeholder="your email"
-                    className="placeholder:font-raleway bg-[#E1E1DC] focus:outline-none border-b-[0.5px] border-[#686868] mt-[10px] lg:mr-7"
+                    className="placeholder:font-raleway bg-secondary focus:outline-none border-b-[0.5px] border-darkGrey mt-[10px] lg:mr-7"
                   />
                 </div>
               </div>
@@ -84,7 +84,7 @@ const About = () => {
                 <textarea
                   rows={4}
                   placeholder="start typing here"
-                  className="placeholder:font-raleway bg-[#E1E1DC] focus:outline-none border-b-[0.5px] border-[#686868] mt-[10px] lg:mr-7"
+                  className="placeholder:font-raleway bg-secondary focus:outline-none border-b-[0.5px] border-darkGrey mt-[10px] lg:mr-7"
                 />
               </div>
             </div>
@@ -92,7 +92,7 @@ const About = () => {
             <div className="flex flex-col md:flex-row items-center justify-between md:items-baseline mt-[35px] row-span-1">
               <p className="font-raleway">matestudio.webdev@gmail.com</p>
 
-              <div className="h-[90px] w-[90px] rounded-xl bg-white p-2 flex items-end mt-[25px] md:mt-0 hover:bg-black hover:text-white transition duration-150 ease-in-out cursor-pointer">
+              <div className="h-[90px] w-[90px] rounded-xl bg-white p-2 flex items-end mt-[25px] md:mt-0 hover:bg-violet hover:text-white transition duration-150 ease-in-out cursor-pointer">
                 <p className="font-raleway">send.</p>
               </div>
             </div>

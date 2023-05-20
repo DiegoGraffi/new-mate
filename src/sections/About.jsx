@@ -14,10 +14,10 @@ const About = () => {
     >
       <div className="flex flex-col justify-between ">
         <div className="w-[120px]">
-          <p className="font-raleway text-[20px] text-[#686868] font-[200]">
+          <p className="font-raleway text-[20px] text-darkGrey font-[200]">
             our values
           </p>
-          <hr className="border-[#686868] border-b-0 opacity-50 my-3" />
+          <hr className="border-darkGrey opacity-50 my-3" />
         </div>
 
         <div className="flex flex-col md:flex-row justify-between overflow-hidden">
@@ -35,7 +35,7 @@ const About = () => {
             initial={"initial"}
             whileInView={"animate"}
             viewport={{ once: true }}
-            className="font-raleway text-[16px] text-[#686868] font-[400] text-justify leading-[19px] flex basis-1/3"
+            className="font-raleway text-[16px] text-darkGrey font-[400] text-justify leading-[19px] flex basis-1/3"
           >
             We are Mate Studio, a digital agency based in San Juan, Argentina
             and London, UK. We are a passionate and dedicated team of web
