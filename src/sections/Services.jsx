@@ -16,7 +16,7 @@ const Services = () => {
       <div className="flex flex-col justify-between ">
         <div className="w-[120px]">
           <p className="font-raleway text-[20px] text-darkGrey font-[200]">
-            what we do?
+            what do we do?
           </p>
           <hr className="border-darkGrey border-b-0 opacity-50 my-3" />
         </div>
@@ -40,7 +40,7 @@ const Services = () => {
           >
             Mate Studio provides a full range of custom software development
             services. To reach your business goals and deliver the best User
-            Experiences, we build unique and durable websites for our clients.
+            Experiences we build unique and durable websites for our clients.
           </motion.p>
         </div>
       </div>

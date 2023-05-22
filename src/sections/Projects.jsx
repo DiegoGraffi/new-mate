@@ -49,8 +49,7 @@ const Projects = () => {
             whileInView={"animate"}
             className="font-raleway text-[16px] text-darkGrey font-[400] text-justify leading-[19px] flex basis-1/3"
           >
-            Take a look at our latest work in UI/UX design and website design
-            and development.
+            Take a look at our latest work in UI/UX design and development.
           </motion.p>
         </div>
       </div>

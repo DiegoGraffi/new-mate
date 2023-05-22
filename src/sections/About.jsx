@@ -41,9 +41,8 @@ const About = () => {
             and London, UK. We are a passionate and dedicated team of web
             developers committed to delivering exceptional digital solutions.
             <br />
-            Our team specialize in creating innovative and high-performance
-            websites and digital experiences that help businesses thrive in the
-            online world.
+            Our team excels in creating cutting-edge websites and digital
+            experiences that empower businesses to thrive in the online world.
           </motion.p>
         </div>
       </div>
