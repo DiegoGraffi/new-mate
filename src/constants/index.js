@@ -34,7 +34,7 @@ export const projects = [
 export const about = [
   {
     id: "about-1",
-    imgUrl: require("../../public/about-creatives.png"),
+    imgUrl: require("../../public/about-creatives.jpg"),
     title: "creatives",
     text: "In a crowded online marketplace, we create unique and engaging designs that allows our client's brand to stand out from the competition and leave a memorable impression on their users. MateStudio builds user-centric interfaces that are easy to navigate, intuitive to use, and provide a delightful overall experience.",
   },
@@ -46,7 +46,7 @@ export const about = [
   },
   {
     id: "about-3",
-    imgUrl: require("../../public/about-communicators.png"),
+    imgUrl: require("../../public/about-communicators.jpg"),
     title: "communicators",
     text: "Open and transparent communication is crucial for the successful execution of any project, and our commitment is to ensure that our clients are kept informed and involved at every stage of the journey - we encourage teamwork with our clients! -. We start every new project understanding our client's requirements and objectives. We take the time to listen, analyze, and strategize in order to develop tailored solutions that align with your brand identity and business goals. Our client-centric approach ensures that your website or web application reflects your values, engages your target audience, and helps you stand out in a competitive digital landscape.",
   },
