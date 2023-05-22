@@ -34,12 +34,12 @@ const About = () => {
             viewport={{ once: true }}
             className="font-raleway text-[16px] text-darkGrey font-[400] text-justify leading-[19px] flex basis-1/3"
           >
-            Let's bring about AWE-inspiring results together!
+            Reach out to us and let's create something incredible together!
             <br />
             <br />
             If you have any questions about our services or want to talk about a
-            possible project, feel free to reach out. We're here to assist you
-            and would love to hear from you!
+            possible project, feel free to reach out. We would love to hear from
+            you!
           </motion.p>
         </div>
       </div>
