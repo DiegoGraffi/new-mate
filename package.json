@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.4.1",
     "autoprefixer": "10.4.14",
     "framer-motion": "^10.12.4",
     "lucide-react": "^0.219.0",
