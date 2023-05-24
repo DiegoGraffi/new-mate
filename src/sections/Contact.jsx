@@ -50,9 +50,9 @@ const About = () => {
         initial={"initial"}
         whileInView={"animate"}
         viewport={{ once: true }}
-        className="mt-[50px]  grid grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]"
+        className="mt-[50px] grid grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]"
       >
-        <div className="bg-secondary h-auto md:h-[600px] col-span-2 flex items-center mx-auto rounded-xl lg:rounded-r-none">
+        <div className="bg-secondary h-auto md:h-[600px] col-span-2  rounded-xl lg:rounded-r-none">
           <ContactForm />
         </div>
         <div className="hidden lg:block">
@@ -70,10 +70,12 @@ function ContactForm() {
 
   if (state.succeeded) {
     return (
-      <p className="font-raleway text-[60px] font-normal p-[50px] ">
-        <span className="text-violet font-normal">Thank you!</span> We'll be in
-        touch soon!
-      </p>
+      <div className="flex items-center justify-center h-full">
+        <p className="font-raleway text-[60px] font-normal p-[50px] ">
+          <span className="text-violet font-normal">Thank you!</span> We'll be
+          in touch soon!
+        </p>
+      </div>
     );
   }
 
@@ -87,7 +89,7 @@ function ContactForm() {
         hello!
       </p>
 
-      <div className="grid row-span-2 md:row-span-1">
+      <div className="grid row-span-2 md:row-span-1 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
           <div className="flex flex-col">
             <label className="font-raleway">name</label>
