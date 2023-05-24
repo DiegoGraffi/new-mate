@@ -15,3 +15,16 @@
 body {
   background-color: #f4f4ee;
 }
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f4f4ee;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #5850d9;
+  box-shadow: 0 -100vh 0 100vh #9892e7;
+}
