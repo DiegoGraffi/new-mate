@@ -53,7 +53,7 @@ const Services = () => {
             activo={activo}
           />
         </div>
-        <div className="lg:hidden">
+        <div className="relative block lg:hidden">
           {services.map((service) => (
             <ServicesMobile key={service.id} service={service} />
           ))}

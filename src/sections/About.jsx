@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Image from "next/image";
+
 import { about } from "../constants/index";
 import AboutCard from "@/components/AboutCard";
 import { motion } from "framer-motion";
@@ -48,21 +50,32 @@ const About = () => {
       </div>
 
       <motion.div
+        key="about1"
         variants={contentAnimation}
         initial={"initial"}
         whileInView={"animate"}
         viewport={{ once: true }}
-        className="mt-[50px] flex lg:flex-row flex-col min-h-[1000px] lg:min-h-[70vh] gap-5"
+        className="hidden mt-[50px] lg:flex lg:flex-row flex-col min-h-[1000px] lg:min-h-[70vh] gap-5"
       >
         {about.map((body, index) => (
           <AboutCard
-            key={body.id}
             {...body}
             index={index}
-            active={active}
+            open={active === body.id}
             handleClick={setActive}
-            text={body.text}
           />
+        ))}
+      </motion.div>
+      <motion.div
+        key="about2"
+        variants={contentAnimation}
+        initial={"initial"}
+        whileInView={"animate"}
+        viewport={{ once: true }}
+        className="mt-[50px] flex lg:hidden flex-col gap-5"
+      >
+        {about.map((body, index) => (
+          <AboutCardMobile {...body} />
         ))}
       </motion.div>
     </section>
@@ -70,3 +83,21 @@ const About = () => {
 };
 
 export default About;
+
+function AboutCardMobile({ id, open, imgUrl, title, text, handleClick }) {
+  return (
+    <div className="flex flex-col  rounded-xl  overflow-hidden">
+      <Image src={imgUrl} alt={title} className="object-cover" />
+
+      <div className="pt-4 pb-6 px-4 flex-col bg-secondary">
+        <h3 className="font-raleway font-semibold text-xl md:text-2xl text-violet">
+          {title}
+        </h3>
+        <hr className="border-violet border-b-0 opacity-50 my-3" />
+        <p className="font-raleway text-[14px] mt-4 text-darkGrey text-justify leading-[19px]">
+          {text}
+        </p>
+      </div>
+    </div>
+  );
+}
