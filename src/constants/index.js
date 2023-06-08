@@ -55,16 +55,19 @@ export const about = [
 export const services = [
   {
     id: "services-01",
+    title: "design",
     imgUrl: require("../../public/services-design.jpg"),
     text: "With so many websites available online, it's crucial your website stands out. We design visually appealing, user-friendly, and optimized websites for both desktop and mobile devices. Our carefully crafted websites can help you attract visitors, increase engagement, and achieve your business goals.",
   },
   {
     id: "services-02",
+    title: "prototyping",
     imgUrl: require("../../public/services-prototyping.jpg"),
     text: "We use Figma to create a preliminary version of your business's website. This web prototype serves as a working model of the final product and allows developers, designers and clients to test the functionality, layout and user experience of your site before it is launched.",
   },
   {
     id: "services-01",
+    title: "development",
     imgUrl: require("../../public/services-development.jpg"),
     text: "We create websites combining eye-catching design, legible code to bring a website to life. We seek for your web page to deliver functional, user-friendly and visually appealing online experiences.",
   },

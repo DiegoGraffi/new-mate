@@ -46,75 +46,132 @@ const Services = () => {
       </div>
 
       <AnimatePresence>
-        <motion.div
-          variants={contentAnimation}
-          initial={"initial"}
-          whileInView={"animate"}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 grid-rows-6 lg:grid-cols-4 lg:grid-rows-1 mt-[50px] lg:mt-[100px] relative h-[600px] md:h-[900px] lg:h-[700px]"
-        >
-          <div className="flex text-center mb-0  lg:mb-0 lg:text-right justify-center lg:justify-end  lg:p-[25px] items-center ">
-            <ul className="flex lg:flex-col ">
-              <li
-                onMouseEnter={() => setActivo(0)}
-                onClick={() => setActivo(0)}
-                className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-darkGrey"
-              >
-                design
-              </li>
-              <li
-                onMouseEnter={() => setActivo(1)}
-                onClick={() => setActivo(1)}
-                className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-darkGrey"
-              >
-                prototyping
-              </li>
-              <li
-                onMouseEnter={() => setActivo(2)}
-                onClick={() => setActivo(2)}
-                className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-darkGrey"
-              >
-                development
-              </li>
-            </ul>
-          </div>
-
-          <AnimatePresence>
-            <div className="grid col-span-1 lg:col-span-2 row-span-2 lg:row-span-1 overflow-hidden relative rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl">
-              <motion.div
-                key={activo}
-                initial={{ x: 100 }}
-                animate={{ x: 0 }}
-                transition={{ type: "tween", duration: 0.5 }}
-                exit={{ x: -100, opacity: 0 }}
-              >
-                <Image
-                  src={servicioActivo.imgUrl}
-                  fill
-                  className="h-full object-cover rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl"
-                />
-              </motion.div>
-            </div>
-          </AnimatePresence>
-
-          <div className="grid row-span-3 p-[25px] justify-between bg-secondary border-x-[1px] lg:border-y-[1px] md:border-r-[1px] lg:border-l-[0px] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-tr-xl ">
-            <motion.div
-              key={activo}
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", duration: 0.8 }}
-              exit={{ scale: 0.8 }}
-              className="flex justify-center h-full items-center"
-            >
-              <p className="font-raleway text-[16px] font-[400] text-darkGrey text-justify ">
-                {servicioActivo.text}
-              </p>
-            </motion.div>
-          </div>
-        </motion.div>
+        <div className="hidden lg:block">
+          <ServicesDesktop
+            setActivo={setActivo}
+            servicioActivo={servicioActivo}
+            activo={activo}
+          />
+        </div>
+        <div className="lg:hidden">
+          {services.map((service) => (
+            <ServicesMobile key={service.id} service={service} />
+          ))}
+        </div>
       </AnimatePresence>
     </section>
   );
 };
+
+function ServicesMobile({ service }) {
+  return (
+    <motion.div
+      variants={contentAnimation}
+      initial={"initial"}
+      whileInView={"animate"}
+      viewport={{ once: true }}
+      className="grid grid-cols-1 grid-rows-6 mt-6 relative h-[600px]"
+    >
+      <div className="flex text-center mb-0  lg:mb-0 lg:text-right justify-center lg:justify-end  lg:p-[25px] items-center ">
+        <ul className="flex lg:flex-col ">
+          <li className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-darkGrey">
+            {service.title}
+          </li>
+        </ul>
+      </div>
+
+      <AnimatePresence>
+        <div className="grid col-span-1 lg:col-span-2 row-span-2 lg:row-span-1 overflow-hidden relative rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl">
+          <motion.div
+            initial={{ x: 100 }}
+            animate={{ x: 0 }}
+            transition={{ type: "tween", duration: 0.5 }}
+            exit={{ x: -100, opacity: 0 }}
+          >
+            <Image
+              src={service.imgUrl}
+              fill
+              className="h-full object-cover rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl"
+            />
+          </motion.div>
+        </div>
+      </AnimatePresence>
+
+      <div className="grid row-span-3 p-[25px] justify-between bg-secondary border-x-[1px] lg:border-y-[1px] md:border-r-[1px] lg:border-l-[0px] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-tr-xl ">
+        <motion.div
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          transition={{ type: "spring", duration: 0.8 }}
+          exit={{ scale: 0.8 }}
+          className="flex justify-center h-full items-center"
+        >
+          <p className="font-raleway text-[16px] font-[400] text-darkGrey text-justify ">
+            {service.text}
+          </p>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
+
+function ServicesDesktop({ setActivo, activo, servicioActivo }) {
+  return (
+    <motion.div
+      variants={contentAnimation}
+      initial={"initial"}
+      whileInView={"animate"}
+      viewport={{ once: true }}
+      className="grid grid-cols-1 grid-rows-6 lg:grid-cols-4 lg:grid-rows-1 mt-[50px] lg:mt-[100px] relative h-[600px] md:h-[900px] lg:h-[700px]"
+    >
+      <div className="flex text-center mb-0  lg:mb-0 lg:text-right justify-center lg:justify-end  lg:p-[25px] items-center ">
+        <ul className="flex lg:flex-col ">
+          {services.map((service, index) => (
+            <li
+              key={service.id}
+              onMouseEnter={() => setActivo(index)}
+              onClick={() => setActivo(index)}
+              className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-darkGrey"
+            >
+              {service.title}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <AnimatePresence>
+        <div className="grid col-span-1 lg:col-span-2 row-span-2 lg:row-span-1 overflow-hidden relative rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl">
+          <motion.div
+            key={activo}
+            initial={{ x: 100 }}
+            animate={{ x: 0 }}
+            transition={{ type: "tween", duration: 0.5 }}
+            exit={{ x: -100, opacity: 0 }}
+          >
+            <Image
+              src={servicioActivo.imgUrl}
+              fill
+              className="h-full object-cover rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl"
+            />
+          </motion.div>
+        </div>
+      </AnimatePresence>
+
+      <div className="grid row-span-3 p-[25px] justify-between bg-secondary border-x-[1px] lg:border-y-[1px] md:border-r-[1px] lg:border-l-[0px] rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-tr-xl ">
+        <motion.div
+          key={activo}
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          transition={{ type: "spring", duration: 0.8 }}
+          exit={{ scale: 0.8 }}
+          className="flex justify-center h-full items-center"
+        >
+          <p className="font-raleway text-[16px] font-[400] text-darkGrey text-justify ">
+            {servicioActivo.text}
+          </p>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default Services;
