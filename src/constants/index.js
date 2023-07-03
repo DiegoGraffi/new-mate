@@ -2,9 +2,10 @@ export const projects = [
   {
     id: "project-1",
     number: "01",
-    imgUrl: require("../../public/plan.jpg"),
+    imgUrl: require("../../public/plansonrisas.png"),
     title: "Plan Sonrisas",
     text: "Sed maximus, enim sit amet egestas aliquam, arcu ante tempor eros, ut ornare nibh massa id nisi. Nullam tincidunt eu enim sed iaculis.",
+    link: "https://www.plansonrisas.com/",
   },
   {
     id: "project-2",

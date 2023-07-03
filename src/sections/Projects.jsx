@@ -61,15 +61,14 @@ const Projects = () => {
         viewport={{ once: true }}
         className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] rounded-xl"
       >
-        <div className="flex basis-[60%] relative aspect-video lg:aspect-auto">
+        <div className="flex basis-[60%] relative aspect-video md:aspect-auto">
           <Image
             src={proyectoActivo.imgUrl}
-            fill
             className="object-cover rounded-tr-xl lg:rounded-tr-none rounded-tl-xl lg:rounded-tl-xl lg:rounded-bl-xl"
           />
         </div>
 
-        <div className="flex basis-[40%]  flex-col p-[25px] justify-between bg-secondary rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
+        <div className="flex basis-[40%] flex-col  p-[25px] justify-between bg-secondary rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
           <div className="flex flex-col gap-5">
             <span className="font-raleway text-[30px] md:text-[40px] text-darkGrey font-[200]">
               {proyectoActivo.title}
