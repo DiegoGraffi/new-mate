@@ -4,7 +4,7 @@ export const projects = [
     number: "01",
     imgUrl: require("../../public/plansonrisas.png"),
     title: "Plan Sonrisas",
-    text: "Sed maximus, enim sit amet egestas aliquam, arcu ante tempor eros, ut ornare nibh massa id nisi. Nullam tincidunt eu enim sed iaculis.",
+    text: "We redesigned a landing page for a client who owns a dental center. By developing a responsive design we ensure the users have the best user experience through mobile to desktop. We also boosted that experience by giving the user the possibility to communicate easily with our client - using a form, Whatsapp and social media -. Additionally, the client has a CMS access to update the website content in real time.",
     link: "https://www.plansonrisas.com/",
   },
   {
