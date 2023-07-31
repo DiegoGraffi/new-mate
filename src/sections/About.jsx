@@ -39,9 +39,9 @@ const About = () => {
             viewport={{ once: true }}
             className="font-raleway text-[16px] text-darkGrey font-[400] text-justify leading-[19px] flex basis-1/3"
           >
-            We are Mate Studio, a digital agency based in San Juan, Argentina
-            and London, UK. We are a passionate and dedicated team of web
-            developers committed to delivering exceptional digital solutions.
+            We are Mate Studio, a digital agency based in Argentina and the UK.
+            We are a passionate and dedicated team of web developers committed
+            to delivering exceptional digital solutions.
             <br />
             Our team excels in creating cutting-edge websites and digital
             experiences that empower businesses to thrive in the online world.
