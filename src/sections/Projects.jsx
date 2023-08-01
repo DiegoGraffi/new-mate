@@ -8,6 +8,9 @@ import {
   contentAnimation,
   sectionName,
 } from "@/utils/motion";
+import Carousel from "nuka-carousel";
+import { ArrowLeftIcon } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 
 const Projects = () => {
   const [activo, setActivo] = useState(0);
@@ -54,75 +57,102 @@ const Projects = () => {
         </div>
       </div>
 
-      <motion.div
-        variants={contentAnimation}
-        initial={"initial"}
-        whileInView={"animate"}
-        viewport={{ once: true }}
-        className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] rounded-xl"
-      >
-        <div className="flex basis-[60%] relative aspect-video md:aspect-auto">
-          <Image
-            src={proyectoActivo.imgUrl}
-            className="object-cover rounded-tr-xl lg:rounded-tr-none rounded-tl-xl lg:rounded-tl-xl lg:rounded-bl-xl"
-          />
-        </div>
-
-        <div className="flex basis-[40%] flex-col  p-[25px] justify-between bg-secondary rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
-          <div className="flex flex-col gap-5">
-            <span className="font-raleway text-[30px] md:text-[40px] text-darkGrey font-[200]">
-              {proyectoActivo.title}
-            </span>
-            <hr className="border-darkGrey" />
-            <p className="font-raleway text-[16px] font-[400] text-darkGrey text-justify mt-5">
-              {proyectoActivo.text}
-            </p>
-          </div>
-
-          <a
-            target="_blank"
-            href={proyectoActivo.link}
-            className="flex justify-end"
-          >
-            <div className="flex justify-start items-end w-[60px] md:w-[100px] h-[60px] md:h-[100px] mt-[40px] bg-principal text-darkGrey font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-violet hover:text-principal hover:text-principaltransition-all duration-150 ease-in-out cursor-pointer">
-              visit
-            </div>
-          </a>
-        </div>
-      </motion.div>
-
-      <ul className="flex justify-between w-[100%] mt-[20px]">
-        <li
-          onMouseEnter={() => setActivo(0)}
-          onClick={() => setActivo(0)}
-          className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
-        >
-          01
-        </li>
-        <li
-          onMouseEnter={() => setActivo(1)}
-          onClick={() => setActivo(1)}
-          className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
-        >
-          02
-        </li>
-        <li
-          onMouseEnter={() => setActivo(2)}
-          onClick={() => setActivo(2)}
-          className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
-        >
-          03
-        </li>
-        <li
-          onMouseEnter={() => setActivo(3)}
-          onClick={() => setActivo(3)}
-          className="font-raleway text-[16px] md:text-[24px] font-[200] cursor-pointer  px-5 md:py-2 hover:font-[400] text-[#686868]"
-        >
-          04
-        </li>
-      </ul>
+      <div className="hidden md:block">
+        <ProjectsDesktop />
+      </div>
+      <div className=" md:hidden">
+        <ProjectsMobile />
+      </div>
     </section>
   );
 };
 
 export default Projects;
+
+function ProjectsDesktop() {
+  return (
+    <Carousel
+      renderCenterLeftControls={(control) => (
+        <button
+          onClick={control.previousSlide}
+          className="w-[45px] h-[45px] bg-white rounded flex justify-center items-center active:bg-gray-300 m-2 shadow-lg"
+        >
+          <ArrowLeftIcon />
+        </button>
+      )}
+      renderCenterRightControls={(control) => (
+        <button
+          onClick={control.nextSlide}
+          className="w-[45px] h-[45px] rounded flex justify-center items-center  active:bg-gray-300 m-2 bg-white shadow-lg"
+        >
+          <ArrowRightIcon />
+        </button>
+      )}
+    >
+      {projects.map((project) => (
+        <div className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] rounded-xl">
+          <div className="flex relative aspect-[3/2]">
+            <Image
+              src={project.imgUrl}
+              fill
+              className="object-cover rounded-tr-xl lg:rounded-tr-none rounded-tl-xl lg:rounded-tl-xl lg:rounded-bl-xl"
+            />
+          </div>
+
+          <div className="flex flex-col  p-[25px] justify-between bg-secondary rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
+            <div className="flex flex-col gap-5">
+              <span className="font-raleway text-[30px] md:text-[40px] text-darkGrey font-[200]">
+                {project.title}
+              </span>
+              <hr className="border-darkGrey" />
+              <p className="font-raleway text-[16px] font-[400] text-darkGrey text-justify mt-5">
+                {project.text}
+              </p>
+            </div>
+
+            <a target="_blank" href={project.link} className="flex justify-end">
+              <div className="flex justify-start items-end w-[60px] md:w-[100px] h-[60px] md:h-[100px] mt-[40px] bg-principal text-darkGrey font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-violet hover:text-principal hover:text-principaltransition-all duration-150 ease-in-out cursor-pointer">
+                visit
+              </div>
+            </a>
+          </div>
+        </div>
+      ))}
+    </Carousel>
+  );
+}
+
+function ProjectsMobile() {
+  return (
+    <>
+      {projects.map((project) => (
+        <div className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] rounded-xl">
+          <div className="flex basis-[60%] relative aspect-video md:aspect-auto">
+            <Image
+              src={project.imgUrl}
+              className="object-cover rounded-tr-xl lg:rounded-tr-none rounded-tl-xl lg:rounded-tl-xl lg:rounded-bl-xl"
+            />
+          </div>
+
+          <div className="flex basis-[40%] flex-col  p-[25px] justify-between bg-secondary rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
+            <div className="flex flex-col gap-5">
+              <span className="font-raleway text-[30px] md:text-[40px] text-darkGrey font-[200]">
+                {project.title}
+              </span>
+              <hr className="border-darkGrey" />
+              <p className="font-raleway text-[16px] font-[400] text-darkGrey text-justify mt-5">
+                {project.text}
+              </p>
+            </div>
+
+            <a target="_blank" href={project.link} className="flex justify-end">
+              <div className="flex justify-start items-end w-[60px] md:w-[100px] h-[60px] md:h-[100px] mt-[40px] bg-principal text-darkGrey font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-violet hover:text-principal hover:text-principaltransition-all duration-150 ease-in-out cursor-pointer">
+                visit
+              </div>
+            </a>
+          </div>
+        </div>
+      ))}
+    </>
+  );
+}
