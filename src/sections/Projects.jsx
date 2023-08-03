@@ -130,27 +130,39 @@ function ProjectsDesktop() {
                   Built with
                 </p>
                 <div className="flex flex-row lg:gap-4">
-                  <Link href="https://nextjs.org/docs" target="_blank">
-                    <Image src={Nextjs} className="h-9 w-9" />
-                  </Link>{" "}
-                  <Link href="https://react.dev/learn" target="_blank">
-                    <Image src={React} className="h-9 w-9" />{" "}
-                  </Link>
-                  <Link href="https://tailwindcss.com/" target="_blank">
-                    <Image src={Tailwind} className="h-9 w-9" />
-                  </Link>
-                  <Link href="https://www.sanity.io/" target="_blank">
-                    {" "}
-                    <Image src={Sanity} className="h-9 w-9" />
-                  </Link>
-                  <Link href="https://www.figma.com/" target="_blank">
-                    {" "}
-                    <Image src={Figma} className="h-9 w-9" />
-                  </Link>
-                  <Link href="https://www.framer.com/motion/" target="_blank">
-                    {" "}
-                    <Image src={Motion} className="h-9 w-9" />
-                  </Link>
+                  {project.technologies.next && (
+                    <Link href="https://nextjs.org/docs" target="_blank">
+                      <Image src={Nextjs} className="h-9 w-9" />
+                    </Link>
+                  )}
+                  {project.technologies.react && (
+                    <Link href="https://react.dev/learn" target="_blank">
+                      <Image src={React} className="h-9 w-9" />{" "}
+                    </Link>
+                  )}
+                  {project.technologies.tailwind && (
+                    <Link href="https://tailwindcss.com/" target="_blank">
+                      <Image src={Tailwind} className="h-9 w-9" />
+                    </Link>
+                  )}
+                  {project.technologies.sanity && (
+                    <Link href="https://www.sanity.io/" target="_blank">
+                      {" "}
+                      <Image src={Sanity} className="h-9 w-9" />
+                    </Link>
+                  )}
+                  {project.technologies.figma && (
+                    <Link href="https://www.figma.com/" target="_blank">
+                      {" "}
+                      <Image src={Figma} className="h-9 w-9" />
+                    </Link>
+                  )}
+                  {project.technologies.framerMotion && (
+                    <Link href="https://www.framer.com/motion/" target="_blank">
+                      {" "}
+                      <Image src={Motion} className="h-9 w-9" />
+                    </Link>
+                  )}
                 </div>
               </div>
               <a target="_blank" href={project.link} className="flex self-end">
@@ -199,27 +211,36 @@ function ProjectsMobile() {
                   Built with
                 </p>
                 <div className="flex flex-row gap-2 md:gap-3">
-                  <Link href="https://nextjs.org/docs" target="_blank">
-                    <Image src={Nextjs} className="h-6 w-6 md:h-7 md:w-7" />
-                  </Link>{" "}
-                  <Link href="https://react.dev/learn" target="_blank">
-                    <Image src={React} className="h-6 w-6 md:h-7 md:w-7" />{" "}
-                  </Link>
-                  <Link href="https://tailwindcss.com/" target="_blank">
-                    <Image src={Tailwind} className="h-6 w-6 md:h-7 md:w-7" />
-                  </Link>
-                  <Link href="https://www.sanity.io/" target="_blank">
-                    {" "}
-                    <Image src={Sanity} className="h-6 w-6 md:h-7 md:w-7" />
-                  </Link>
-                  <Link href="https://www.figma.com/" target="_blank">
-                    {" "}
-                    <Image src={Figma} className="h-6 w-6 md:h-7 md:w-7" />
-                  </Link>
-                  <Link href="https://www.framer.com/motion/" target="_blank">
-                    {" "}
-                    <Image src={Motion} className="h-6 w-6 md:h-7 md:w-7" />
-                  </Link>
+                  {project.technologies.next && (
+                    <Link href="https://nextjs.org/docs" target="_blank">
+                      <Image src={Nextjs} className="h-6 w-6 md:h-7 md:w-7" />
+                    </Link>
+                  )}
+                  {project.technologies.react && (
+                    <Link href="https://react.dev/learn" target="_blank">
+                      <Image src={React} className="h-6 w-6 md:h-7 md:w-7" />{" "}
+                    </Link>
+                  )}
+                  {project.technologies.tailwind && (
+                    <Link href="https://tailwindcss.com/" target="_blank">
+                      <Image src={Tailwind} className="h-6 w-6 md:h-7 md:w-7" />
+                    </Link>
+                  )}
+                  {project.technologies.sanity && (
+                    <Link href="https://www.sanity.io/" target="_blank">
+                      <Image src={Sanity} className="h-6 w-6 md:h-7 md:w-7" />
+                    </Link>
+                  )}
+                  {project.technologies.figma && (
+                    <Link href="https://www.figma.com/" target="_blank">
+                      <Image src={Figma} className="h-6 w-6 md:h-7 md:w-7" />
+                    </Link>
+                  )}
+                  {project.technologies.framerMotion && (
+                    <Link href="https://www.framer.com/motion/" target="_blank">
+                      <Image src={Motion} className="h-6 w-6 md:h-7 md:w-7" />
+                    </Link>
+                  )}
                 </div>
               </div>
               <a target="_blank" href={project.link} className="flex self-end">
