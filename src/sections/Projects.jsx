@@ -1,7 +1,17 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 import { motion } from "framer-motion";
+import Figma from "../tech-logos/figma.png";
+import Sanity from "../tech-logos/sanity.png";
+import Nextjs from "../tech-logos/nextjs.png";
+import React from "../tech-logos/react.png";
+import Tailwind from "../tech-logos/tailwind.png";
+import Motion from "../tech-logos/motion.png";
+
 import { projects, AnimatePresence } from "@/constants";
+
 import {
   wordAnimation,
   textAnimation,
@@ -72,6 +82,10 @@ export default Projects;
 function ProjectsDesktop() {
   return (
     <Carousel
+      className="mt-12 rounded-xl"
+      wrapAround
+      // autoplay
+      renderBottomCenterControls={null}
       renderCenterLeftControls={(control) => (
         <button
           onClick={control.previousSlide}
@@ -90,31 +104,61 @@ function ProjectsDesktop() {
       )}
     >
       {projects.map((project) => (
-        <div className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] rounded-xl">
-          <div className="flex relative aspect-[3/2]">
-            <Image
-              src={project.imgUrl}
-              fill
-              className="object-cover rounded-tr-xl lg:rounded-tr-none rounded-tl-xl lg:rounded-tl-xl lg:rounded-bl-xl"
-            />
+        <div className="flex relative min-h-[600px] rounded-xl">
+          <div className="flex relative flex-1">
+            <Image src={project.imgUrl} fill className="object-cover" />
           </div>
 
-          <div className="flex flex-col  p-[25px] justify-between bg-secondary rounded-br-xl rounded-bl-xl lg:rounded-bl-none lg:rounded-r-xl">
-            <div className="flex flex-col gap-5">
+          <div className="flex flex-col flex-1 p-[25px] justify-between bg-secondary">
+            <div className="flex flex-col gap-5 pr-9">
               <span className="font-raleway text-[30px] md:text-[40px] text-darkGrey font-[200]">
                 {project.title}
               </span>
               <hr className="border-darkGrey" />
-              <p className="font-raleway text-[16px] font-[400] text-darkGrey text-justify mt-5">
-                {project.text}
-              </p>
+              {project.text.split("\n").map((text, i) => (
+                <p
+                  key={i}
+                  className="font-raleway text-[16px] font-[400] text-darkGrey text-justify my-2"
+                >
+                  {text}
+                </p>
+              ))}
             </div>
-
-            <a target="_blank" href={project.link} className="flex justify-end">
-              <div className="flex justify-start items-end w-[60px] md:w-[100px] h-[60px] md:h-[100px] mt-[40px] bg-principal text-darkGrey font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-violet hover:text-principal hover:text-principaltransition-all duration-150 ease-in-out cursor-pointer">
-                visit
+            <div className="flex flex-row justify-between items-end">
+              <div className="flex items-center ">
+                <p className="mr-4 text-darkGrey text-[16px] font-200">
+                  Built with
+                </p>
+                <div className="flex flex-row gap-4">
+                  <Link href="https://nextjs.org/docs" target="_blank">
+                    <Image src={Nextjs} className="h-9 w-9" />
+                  </Link>{" "}
+                  <Link href="https://react.dev/learn" target="_blank">
+                    <Image src={React} className="h-9 w-9" />{" "}
+                  </Link>
+                  <Link href="https://tailwindcss.com/" target="_blank">
+                    <Image src={Tailwind} className="h-9 w-9" />
+                  </Link>
+                  <Link href="https://www.sanity.io/" target="_blank">
+                    {" "}
+                    <Image src={Sanity} className="h-9 w-9" />
+                  </Link>
+                  <Link href="https://www.figma.com/" target="_blank">
+                    {" "}
+                    <Image src={Figma} className="h-9 w-9" />
+                  </Link>
+                  <Link href="https://www.framer.com/motion/" target="_blank">
+                    {" "}
+                    <Image src={Motion} className="h-9 w-9" />
+                  </Link>
+                </div>
               </div>
-            </a>
+              <a target="_blank" href={project.link} className="flex self-end">
+                <div className="flex justify-start items-end w-[60px] md:w-[100px] h-[60px] md:h-[100px] mt-[40px] bg-principal text-darkGrey font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-violet hover:text-principal transition-all duration-150 ease-in-out cursor-pointer">
+                  visit
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       ))}
@@ -140,16 +184,50 @@ function ProjectsMobile() {
                 {project.title}
               </span>
               <hr className="border-darkGrey" />
-              <p className="font-raleway text-[16px] font-[400] text-darkGrey text-justify mt-5">
-                {project.text}
-              </p>
+              {project.text.split("\n").map((text, i) => (
+                <p
+                  key={i}
+                  className="font-raleway text-[16px] font-[400] text-darkGrey text-justify mt-5"
+                >
+                  {text}
+                </p>
+              ))}
             </div>
-
-            <a target="_blank" href={project.link} className="flex justify-end">
-              <div className="flex justify-start items-end w-[60px] md:w-[100px] h-[60px] md:h-[100px] mt-[40px] bg-principal text-darkGrey font-raleway font-normal text-[18px] py-2 px-4 rounded-lg hover:bg-violet hover:text-principal hover:text-principaltransition-all duration-150 ease-in-out cursor-pointer">
-                visit
+            <div className="flex flex-row justify-between items-end">
+              <div className="flex items-center flex-col">
+                <p className="mb-3 text-darkGrey text-[16px] font-200">
+                  Built with
+                </p>
+                <div className="flex flex-row gap-2">
+                  <Link href="https://nextjs.org/docs" target="_blank">
+                    <Image src={Nextjs} className="h-6 w-6" />
+                  </Link>{" "}
+                  <Link href="https://react.dev/learn" target="_blank">
+                    <Image src={React} className="h-6 w-6" />{" "}
+                  </Link>
+                  <Link href="https://tailwindcss.com/" target="_blank">
+                    <Image src={Tailwind} className="h-6 w-6" />
+                  </Link>
+                  <Link href="https://www.sanity.io/" target="_blank">
+                    {" "}
+                    <Image src={Sanity} className="h-6 w-6" />
+                  </Link>
+                  <Link href="https://www.figma.com/" target="_blank">
+                    {" "}
+                    <Image src={Figma} className="h-6 w-6" />
+                  </Link>
+                  <Link href="https://www.framer.com/motion/" target="_blank">
+                    {" "}
+                    <Image src={Motion} className="h-6 w-6" />
+                  </Link>
+                </div>
               </div>
-            </a>
+              <a target="_blank" href={project.link} className="flex self-end">
+                <div className="flex justify-start items-end w-[60px] md:w-[100px] h-[60px] md:h-[100px] mt-[40px] bg-principal text-darkGrey font-raleway font-normal text-[16px] py-2 px-4 rounded-lg hover:bg-violet hover:text-principal hover:text-principaltransition-all duration-150 ease-in-out cursor-pointer">
+                  visit
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       ))}

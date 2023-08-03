@@ -2,9 +2,9 @@ export const projects = [
   {
     id: "project-1",
     number: "01",
-    imgUrl: require("@/images/projects/01.png"),
-    title: "Pablo Montemurro 'Capacitación y Desarrollo'",
-    text: "We redesigned a landing page for a client who owns a dental center. By developing a responsive design we ensure the users have the best user experience through mobile to desktop. We also boosted that experience by giving the user the possibility to communicate easily with our client - using a form, Whatsapp and social media -. Additionally, the client has a CMS access to update the website content in real time.",
+    imgUrl: require("@/images/projects/montemurropablo.png"),
+    title: "Pablo Montemurro",
+    text: "Pablo Montemurro and his team work with companies giving talks and helping them work better as a team. They reached us because they needed a website to communicate their work and be able to expand to new clients. They had a vision for what their website would be, so from that we started designing and prototyping what the final result would be.\nThey needed the possibility to add new talks to their website so we implemented a CMS to achieve that. We built templates for the existing talks so they could have as many pages as needed. The result was a modern website with a focus on responsive design to help them reach more clients.",
     link: "https://www.pablomontemurro.com.ar/",
   },
   {
