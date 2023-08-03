@@ -67,10 +67,10 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="hidden md:block">
+      <div className="hidden md:hidden lg:block">
         <ProjectsDesktop />
       </div>
-      <div className=" md:hidden">
+      <div className=" lg:hidden">
         <ProjectsMobile />
       </div>
     </section>
@@ -129,7 +129,7 @@ function ProjectsDesktop() {
                 <p className="mr-4 text-darkGrey text-[16px] font-200">
                   Built with
                 </p>
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-row lg:gap-4">
                   <Link href="https://nextjs.org/docs" target="_blank">
                     <Image src={Nextjs} className="h-9 w-9" />
                   </Link>{" "}
@@ -194,31 +194,31 @@ function ProjectsMobile() {
               ))}
             </div>
             <div className="flex flex-row justify-between items-end">
-              <div className="flex items-center flex-col">
-                <p className="mb-3 text-darkGrey text-[16px] font-200">
+              <div className="flex items-center flex-col md:flex-row">
+                <p className="mb-3 md:mr-3 md:mb-0 text-darkGrey text-[16px] font-200">
                   Built with
                 </p>
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-row gap-2 md:gap-3">
                   <Link href="https://nextjs.org/docs" target="_blank">
-                    <Image src={Nextjs} className="h-6 w-6" />
+                    <Image src={Nextjs} className="h-6 w-6 md:h-7 md:w-7" />
                   </Link>{" "}
                   <Link href="https://react.dev/learn" target="_blank">
-                    <Image src={React} className="h-6 w-6" />{" "}
+                    <Image src={React} className="h-6 w-6 md:h-7 md:w-7" />{" "}
                   </Link>
                   <Link href="https://tailwindcss.com/" target="_blank">
-                    <Image src={Tailwind} className="h-6 w-6" />
+                    <Image src={Tailwind} className="h-6 w-6 md:h-7 md:w-7" />
                   </Link>
                   <Link href="https://www.sanity.io/" target="_blank">
                     {" "}
-                    <Image src={Sanity} className="h-6 w-6" />
+                    <Image src={Sanity} className="h-6 w-6 md:h-7 md:w-7" />
                   </Link>
                   <Link href="https://www.figma.com/" target="_blank">
                     {" "}
-                    <Image src={Figma} className="h-6 w-6" />
+                    <Image src={Figma} className="h-6 w-6 md:h-7 md:w-7" />
                   </Link>
                   <Link href="https://www.framer.com/motion/" target="_blank">
                     {" "}
-                    <Image src={Motion} className="h-6 w-6" />
+                    <Image src={Motion} className="h-6 w-6 md:h-7 md:w-7" />
                   </Link>
                 </div>
               </div>
