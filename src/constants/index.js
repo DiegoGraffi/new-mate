@@ -2,7 +2,7 @@ export const projects = [
   {
     id: "project-1",
     number: "01",
-    imgUrl: require("@/images/projects/montemurropablo.png"),
+    imgUrl: require("@/images/projects/01.png"),
     title: "Pablo Montemurro 'Capacitación y Desarrollo'",
     text: "We redesigned a landing page for a client who owns a dental center. By developing a responsive design we ensure the users have the best user experience through mobile to desktop. We also boosted that experience by giving the user the possibility to communicate easily with our client - using a form, Whatsapp and social media -. Additionally, the client has a CMS access to update the website content in real time.",
     link: "https://www.pablomontemurro.com.ar/",
@@ -10,7 +10,7 @@ export const projects = [
   {
     id: "project-2",
     number: "02",
-    imgUrl: require("../../public/plansonrisas.png"),
+    imgUrl: require("@/images/projects/02.png"),
     title: "Plan Sonrisas",
     text: "We redesigned a landing page for a client who owns a dental center. By developing a responsive design we ensure the users have the best user experience through mobile to desktop. We also boosted that experience by giving the user the possibility to communicate easily with our client - using a form, Whatsapp and social media -. Additionally, the client has a CMS access to update the website content in real time.",
     link: "https://www.plansonrisas.com/",
@@ -18,7 +18,7 @@ export const projects = [
   {
     id: "project-3",
     number: "03",
-    imgUrl: require("../../public/work2.png"),
+    imgUrl: require("@/images/projects/03.png"),
     title: "Parque Nacional 'Quebrada del Condorito'",
     text: "Mauris ornare, lorem hendrerit venenatis dictum, magna lorem imperdiet eros, vel aliquet mi orci quis tellus. Cras sagittis nisi a nibh facilisis ornare.",
     link: "https://condorito.netlify.app/",
