@@ -166,16 +166,13 @@ function ProjectsDesktop() {
                     </Link>
                   )}
                   {project.technologies.bootstrap && (
-                    <Link
-                      href="https://www.framer.com/bootstrap/"
-                      target="_blank"
-                    >
+                    <Link href="https://getbootstrap.com/" target="_blank">
                       <Image src={Bootstrap} className="h-9 w-9" />
                     </Link>
                   )}
                   {project.technologies.netlify && (
                     <Link
-                      href="https://www.framer.com/netlify/"
+                      href="https://www.netlify.com/?attr=homepage-modal"
                       target="_blank"
                     >
                       <Image src={Netlify} className="h-9 w-9" />
@@ -260,10 +257,7 @@ function ProjectsMobile() {
                     </Link>
                   )}
                   {project.technologies.bootstrap && (
-                    <Link
-                      href="https://www.framer.com/bootstrap/"
-                      target="_blank"
-                    >
+                    <Link href="https://getbootstrap.com/" target="_blank">
                       <Image
                         src={Bootstrap}
                         className="h-6 w-6 md:h-7 md:w-7"
@@ -272,7 +266,7 @@ function ProjectsMobile() {
                   )}
                   {project.technologies.netlify && (
                     <Link
-                      href="https://www.framer.com/netlify/"
+                      href="https://www.netlify.com/?attr=homepage-modal"
                       target="_blank"
                     >
                       <Image src={Netlify} className="h-6 w-6 md:h-7 md:w-7" />
