@@ -9,6 +9,8 @@ import Nextjs from "../tech-logos/nextjs.png";
 import React from "../tech-logos/react.png";
 import Tailwind from "../tech-logos/tailwind.png";
 import Motion from "../tech-logos/motion.png";
+import Bootstrap from "../tech-logos/bootstrap.png";
+import Netlify from "../tech-logos/netlify.png";
 
 import { projects, AnimatePresence } from "@/constants";
 
@@ -163,6 +165,22 @@ function ProjectsDesktop() {
                       <Image src={Motion} className="h-9 w-9" />
                     </Link>
                   )}
+                  {project.technologies.bootstrap && (
+                    <Link
+                      href="https://www.framer.com/bootstrap/"
+                      target="_blank"
+                    >
+                      <Image src={Bootstrap} className="h-9 w-9" />
+                    </Link>
+                  )}
+                  {project.technologies.netlify && (
+                    <Link
+                      href="https://www.framer.com/netlify/"
+                      target="_blank"
+                    >
+                      <Image src={Netlify} className="h-9 w-9" />
+                    </Link>
+                  )}
                 </div>
               </div>
               <a target="_blank" href={project.link} className="flex self-end">
@@ -239,6 +257,25 @@ function ProjectsMobile() {
                   {project.technologies.framerMotion && (
                     <Link href="https://www.framer.com/motion/" target="_blank">
                       <Image src={Motion} className="h-6 w-6 md:h-7 md:w-7" />
+                    </Link>
+                  )}
+                  {project.technologies.bootstrap && (
+                    <Link
+                      href="https://www.framer.com/bootstrap/"
+                      target="_blank"
+                    >
+                      <Image
+                        src={Bootstrap}
+                        className="h-6 w-6 md:h-7 md:w-7"
+                      />
+                    </Link>
+                  )}
+                  {project.technologies.netlify && (
+                    <Link
+                      href="https://www.framer.com/netlify/"
+                      target="_blank"
+                    >
+                      <Image src={Netlify} className="h-6 w-6 md:h-7 md:w-7" />
                     </Link>
                   )}
                 </div>

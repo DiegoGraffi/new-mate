@@ -13,6 +13,8 @@ type Project = {
     sanity?: boolean;
     figma?: boolean;
     framerMotion?: boolean;
+    bootstrap?: boolean;
+    netlify?: boolean;
   };
 };
 
@@ -30,6 +32,8 @@ export const projects: Array<Project> = [
       sanity: true,
       figma: true,
       framerMotion: true,
+      bootstrap: false,
+      netlify: false,
     },
   },
   {
@@ -45,6 +49,8 @@ export const projects: Array<Project> = [
       sanity: true,
       figma: true,
       framerMotion: true,
+      bootstrap: false,
+      netlify: false,
     },
   },
   {
@@ -52,14 +58,33 @@ export const projects: Array<Project> = [
     imgUrl: require("@/images/projects/03.png"),
     title: "Parque Nacional 'Quebrada del Condorito'",
     text: "Mauris ornare, lorem hendrerit venenatis dictum, magna lorem imperdiet eros, vel aliquet mi orci quis tellus. Cras sagittis nisi a nibh facilisis ornare.",
-    link: "https://condorito.netlify.app/",
+    link: "https://rosanurserieslondon.netlify.app/",
     technologies: {
-      next: true,
+      next: false,
       react: true,
-      tailwind: true,
+      tailwind: false,
       sanity: false,
       figma: true,
-      framerMotion: true,
+      framerMotion: false,
+      bootstrap: false,
+      netlify: false,
+    },
+  },
+  {
+    id: "project-4",
+    imgUrl: require("@/images/projects/03.png"),
+    title: "Rosa Nurseries",
+    text: "Personal project about a made-up plant nursery. The website is an e-shop to be able to buy plants online. It includes features like a working cart, a product page for each available plant and a responsive design that is mobile friendly. It also has a sign in and sign up page to be able to track your order.",
+    link: "https://condorito.netlify.app/",
+    technologies: {
+      next: false,
+      react: true,
+      tailwind: false,
+      sanity: false,
+      figma: false,
+      framerMotion: false,
+      bootstrap: true,
+      netlify: true,
     },
   },
 ];
