@@ -57,7 +57,7 @@ export const projects: Array<Project> = [
     id: "project-3",
     imgUrl: require("@/images/projects/03.png"),
     title: "Parque Nacional 'Quebrada del Condorito'",
-    text: "Mauris ornare, lorem hendrerit venenatis dictum, magna lorem imperdiet eros, vel aliquet mi orci quis tellus. Cras sagittis nisi a nibh facilisis ornare.",
+    text: "Diego, a member of our team, is fond of nature and photography. While he was exploring the national park “Quebrada del Condorito” he managed to capture some wildlife with his camera. As a result we decided to build a mock website to show his pictures and information related to the park itself. This website was a recreation of the official national park’s site with a modern and clean design putting emphasis on the photography. *This website doesnt represent the national park “Quebrada del Condorito”, it was made as an exercise of good web design.",
     link: "https://rosanurserieslondon.netlify.app/",
     technologies: {
       next: false,
