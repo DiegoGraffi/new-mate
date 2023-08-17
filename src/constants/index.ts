@@ -3,6 +3,7 @@ import { StaticImageData } from "next/image";
 type Project = {
   id: string;
   imgUrl: StaticImageData;
+  imgUrlHover: StaticImageData;
   title: string;
   text: string;
   link: string;
@@ -22,6 +23,7 @@ export const projects: Array<Project> = [
   {
     id: "project-1",
     imgUrl: require("@/images/projects/01.png"),
+    imgUrlHover: require("@/images/projects/01-2.png"),
     title: "Pablo Montemurro",
     text: "Pablo Montemurro and his team work with companies giving talks and helping them work better as a team. They reached us because they needed a website to communicate their work and be able to expand to new clients. They had a vision for what their website would be, so from that we started designing and prototyping what the final result would be.\nThey needed the possibility to add new talks to their website so we implemented a CMS to achieve that. We built templates for the existing talks so they could have as many pages as needed. The result was a modern website with a focus on responsive design to help them reach more clients.",
     link: "https://www.pablomontemurro.com.ar/",
@@ -39,6 +41,7 @@ export const projects: Array<Project> = [
   {
     id: "project-2",
     imgUrl: require("@/images/projects/02.png"),
+    imgUrlHover: require("@/images/projects/01-2.png"),
     title: "Plan Sonrisas",
     text: "We redesigned a landing page for a client who owns a dental center. By developing a responsive design we ensure the users have the best user experience through mobile to desktop. We also boosted that experience by giving the user the possibility to communicate easily with our client - using a form, Whatsapp and social media -. Additionally, the client has a CMS access to update the website content in real time.",
     link: "https://www.plansonrisas.com/",
@@ -56,6 +59,7 @@ export const projects: Array<Project> = [
   {
     id: "project-3",
     imgUrl: require("@/images/projects/03.png"),
+    imgUrlHover: require("@/images/projects/01-2.png"),
     title: "Parque Nacional 'Quebrada del Condorito'",
     text: "Diego, a member of our team, is fond of nature and photography. While he was exploring the national park “Quebrada del Condorito” he managed to capture some wildlife with his camera. As a result we decided to build a mock website to show his pictures and information related to the park itself. This website was a recreation of the official national park’s site with a modern and clean design putting emphasis on the photography. *This website doesnt represent the national park “Quebrada del Condorito”, it was made as an exercise of good web design.",
     link: "https://quebradacondorito.vercel.app/",
@@ -73,6 +77,7 @@ export const projects: Array<Project> = [
   {
     id: "project-4",
     imgUrl: require("@/images/projects/04.png"),
+    imgUrlHover: require("@/images/projects/01-2.png"),
     title: "Rosa Nurseries",
     text: "Personal project about a made-up plant nursery. The website is an e-shop to be able to buy plants online. It includes features like a working cart, a product page for each available plant and a responsive design that is mobile friendly. It also has a sign in and sign up page to be able to track your order.",
     link: "https://rosanurserieslondon.netlify.app/",

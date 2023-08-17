@@ -60,7 +60,7 @@ const About = () => {
         {about.map((body, index) => (
           <AboutCard
             {...body}
-            index={index}
+            key={index}
             open={active === body.id}
             handleClick={setActive}
           />
@@ -75,7 +75,7 @@ const About = () => {
         className="mt-[50px] flex lg:hidden flex-col gap-5"
       >
         {about.map((body, index) => (
-          <AboutCardMobile {...body} />
+          <AboutCardMobile {...body} key={index} />
         ))}
       </motion.div>
     </section>

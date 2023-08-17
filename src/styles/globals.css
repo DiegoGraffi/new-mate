@@ -9,6 +9,11 @@
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: rgb(88, 80, 217);
+  color: white;
+}
+
 body {
   background-color: #f4f4ee;
 }

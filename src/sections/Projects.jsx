@@ -105,9 +105,14 @@ function ProjectsDesktop() {
         </button>
       )}
     >
-      {projects.map((project) => (
-        <div className="flex relative min-h-[600px] rounded-xl">
+      {projects.map((project, index) => (
+        <div className="flex relative min-h-[600px] rounded-xl" key={index}>
           <div className="flex relative flex-1">
+            <Image
+              src={project.imgUrlHover}
+              fill
+              className="object-cover z-50 opacity-0 hover:opacity-100 transition-all ease-in-out duration-300"
+            />
             <Image src={project.imgUrl} fill className="object-cover" />
           </div>
 
@@ -196,8 +201,11 @@ function ProjectsDesktop() {
 function ProjectsMobile() {
   return (
     <>
-      {projects.map((project) => (
-        <div className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] rounded-xl">
+      {projects.map((project, index) => (
+        <div
+          className="flex flex-col lg:flex-row gap-0 mt-[50px] relative lg:h-[600px] rounded-xl"
+          key={index}
+        >
           <div className="flex basis-[60%] relative aspect-video md:aspect-auto">
             <Image
               src={project.imgUrl}
