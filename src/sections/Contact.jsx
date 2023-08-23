@@ -12,10 +12,9 @@ const About = () => {
     >
       <div className="flex flex-col justify-between ">
         <div className="w-[120px]">
-          <p className="font-raleway text-[20px] text-darkGrey font-[200]">
+          <p className="font-raleway text-[20px] text-darkGrey font-[200] border-b border-b-darkGrey border-opacity-50 py-3 w-max">
             contact
           </p>
-          <hr className="border-darkGrey border-b-0 opacity-50 my-3" />
         </div>
 
         <div className="flex flex-col md:flex-row justify-between overflow-hidden">

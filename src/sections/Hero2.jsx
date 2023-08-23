@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import letter from "../../public/a-letter.png";
 import letterB from "../../public/a-letter-black.png";
+import aViolet from "../../public/a-violet.svg";
 import HeroBan from "../../public/fondo.jpg";
 import logo from "../../public/logo-mate.png";
 import { MenuIcon, XIcon } from "lucide-react";
@@ -30,7 +31,7 @@ const Hero = () => {
           <Image
             src={letter}
             alt="logo"
-            className="object-contain w-[30px] md:w-[50px]"
+            className="object-contain w-[30px] md:w-[50px] md:hidden"
             priority
           />
 
@@ -41,40 +42,47 @@ const Hero = () => {
           />
 
           {/* Navegación Desktop */}
-          <ul className="hidden md:flex justify-between gap-[3px] ">
+
+          <ul className="hidden md:flex justify-center items-center gap-[3rem] w-full bg-principal rounded-md ">
             <Link
               href="#projects"
               scroll={false}
-              className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm rounded-l-xl hover:px-10"
+              className="font-raleway py-2 px-5 cursor-pointer "
             >
-              <li className="font-raleway font-[400] text-[#686868]">
+              <li className="font-raleway font-[400] text-darkGrey hover:text-violet transition-all duration-200 ease-in-out ">
                 projects
               </li>
             </Link>
             <Link
               href="#services"
               scroll={false}
-              className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm hover:px-10"
+              className="font-raleway py-2 px-5 cursor-pointer "
             >
-              <li className="font-raleway font-[400] text-[#686868]">
+              <li className="font-raleway font-[400] text-darkGrey hover:text-violet transition-all duration-200 ease-in-out ">
                 services
               </li>
             </Link>
+            <Image
+              src={aViolet}
+              alt="logo"
+              className="object-contain w-[30px] md:w-[50px] hidden md:flex scale-125 "
+              priority
+            />
             <Link
               href="#about"
               scroll={false}
-              className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm hover:px-10"
+              className="font-raleway py-2 px-5 cursor-pointer "
             >
-              <li className="font-raleway font-[400] text-[#686868]">
+              <li className="font-raleway font-[400] text-darkGrey hover:text-violet transition-all duration-200 ease-in-out ">
                 about us
               </li>
             </Link>
             <Link
               href="#contact"
               scroll={false}
-              className="font-raleway bg-[#F4F4EE] py-2 px-5 cursor-pointer border-[#F4F4EE] border-y-4 hover:border-b-[#686868] transition-all duration-200 ease-in-out rounded-sm rounded-r-xl hover:px-10"
+              className="font-raleway py-2 px-5 cursor-pointer "
             >
-              <li className="font-raleway font-[400] text-[#686868]">
+              <li className="font-raleway font-[400] text-darkGrey hover:text-violet transition-all duration-200 ease-in-out ">
                 contact
               </li>
             </Link>
