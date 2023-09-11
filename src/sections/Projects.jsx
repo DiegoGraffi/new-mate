@@ -153,19 +153,16 @@ function ProjectsDesktop() {
                   )}
                   {project.technologies.sanity && (
                     <Link href="https://www.sanity.io/" target="_blank">
-                      {" "}
                       <Image src={Sanity} className="h-9 w-9" />
                     </Link>
                   )}
                   {project.technologies.figma && (
                     <Link href="https://www.figma.com/" target="_blank">
-                      {" "}
                       <Image src={Figma} className="h-9 w-9" />
                     </Link>
                   )}
                   {project.technologies.framerMotion && (
                     <Link href="https://www.framer.com/motion/" target="_blank">
-                      {" "}
                       <Image src={Motion} className="h-9 w-9" />
                     </Link>
                   )}

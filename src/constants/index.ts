@@ -25,7 +25,7 @@ export const projects: Array<Project> = [
     imgUrl: require("@/images/projects/01.png"),
     imgUrlHover: require("@/images/projects/01-2.png"),
     title: "Pablo Montemurro",
-    text: "Pablo Montemurro and his team work with companies giving talks and helping them work better as a team. They reached us because they needed a website to communicate their work and be able to expand to new clients. They had a vision for what their website would be, so from that we started designing and prototyping what the final result would be.\nThey needed the possibility to add new talks to their website so we implemented a CMS to achieve that. We built templates for the existing talks so they could have as many pages as needed. The result was a modern website with a focus on responsive design to help them reach more clients.",
+    text: "Pablo Montemurro and his team work with companies giving talks and helping them work better as a team. They reached us because they needed a website to communicate their work and be able to expand to new clients. They had a vision for what their website would be, so from that we started designing and prototyping what the final result would be.T\nhey needed the possibility to add new talks to their website so we implemented a CMS to achieve that. We built templates for the existing talks so they could have as many pages as needed. The result was a modern website with a focus on responsive design to help them reach more clients.",
     link: "https://www.pablomontemurro.com.ar/",
     technologies: {
       next: true,
@@ -84,11 +84,11 @@ export const projects: Array<Project> = [
     technologies: {
       next: false,
       react: true,
-      tailwind: false,
+      tailwind: true,
       sanity: false,
       figma: false,
       framerMotion: false,
-      bootstrap: true,
+      bootstrap: false,
       netlify: true,
     },
   },
