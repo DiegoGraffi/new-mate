@@ -89,10 +89,10 @@ function AboutCardMobile({ id, open, imgUrl, title, text, handleClick }) {
       <Image src={imgUrl} alt={title} className="object-cover" />
 
       <div className="pt-4 pb-6 px-4 flex-col bg-secondary">
-        <h3 className="font-raleway font-semibold text-xl md:text-2xl text-violet">
+        <h3 className="font-raleway font-semibold text-xl md:text-2xl text-darkGrey">
           {title}
         </h3>
-        <hr className="border-violet border-b-0 opacity-50 my-3" />
+        <hr className="border-darkGrey border-b-0 opacity-50 my-3" />
         <p className="font-raleway text-[14px] mt-4 text-darkGrey text-justify leading-[19px]">
           {text}
         </p>

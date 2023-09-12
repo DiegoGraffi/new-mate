@@ -8,9 +8,9 @@ const About = () => {
   return (
     <section
       id="contact"
-      className="h-[100vh] max-w-[1536px] mx-auto p-[25px] mt-[25px] lg:mt-[25px] "
+      className="min-h-[100vh] max-w-[1536px] mx-auto p-[25px] mt-[25px] lg:mt-[25px] "
     >
-      <div className="flex flex-col justify-between ">
+      <div className="flex flex-col justify-between">
         <div className="w-[120px]">
           <p className="font-raleway text-[20px] text-darkGrey font-[200] border-b border-b-darkGrey border-opacity-50 py-3 w-max">
             contact
@@ -49,7 +49,7 @@ const About = () => {
         initial={"initial"}
         whileInView={"animate"}
         viewport={{ once: true }}
-        className="mt-[50px] grid grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]"
+        className="grid mt-[50px] grid-cols-1 lg:grid-cols-3 min-h-[70vh] pb-[50px]"
       >
         <div className="bg-secondary h-auto md:h-[600px] col-span-2  rounded-xl lg:rounded-r-none">
           <ContactForm />
@@ -79,17 +79,14 @@ function ContactForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="p-[25px] grid grid-rows-4 md:grid-rows-3"
-    >
+    <form onSubmit={handleSubmit} className="p-[25px] flex flex-col">
       <p className="font-raleway text-[52px] md:text-[64px] leading-[64px] md:leading-[75px] row-span-1">
         say <br />
         hello!
       </p>
 
       <div className="grid row-span-2 md:row-span-1 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px] mt-8">
           <div className="flex flex-col">
             <label className="font-raleway">name</label>
             <input
@@ -122,13 +119,13 @@ function ContactForm() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-between md:items-baseline mt-[35px] row-span-1">
+      <div className="flex flex-col md:flex-row items-center justify-between md:items-baseline mt-16 row-span-1 ">
         <p className="font-raleway">matestudio.webdev@gmail.com</p>
 
         <button
           type="submit"
           disabled={state.submitting}
-          className="h-[90px] w-[90px] rounded-xl bg-white p-2 flex items-end mt-[25px] md:mt-0 hover:bg-violet hover:text-white transition duration-150 ease-in-out cursor-pointer"
+          className="h-[90px] w-[90px] rounded-xl bg-principal p-2 flex items-end mt-[25px] md:mt-0 hover:bg-violet hover:text-white transition duration-150 ease-in-out cursor-pointer"
         >
           <p className="font-raleway">send.</p>
         </button>

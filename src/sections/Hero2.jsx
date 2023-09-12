@@ -92,13 +92,14 @@ const Hero = () => {
         <AnimatePresence>
           {menuOpen ? (
             <motion.ul
-              initial={{ y: -200 }}
-              animate={{ y: 0 }}
+              initial={{ x: 400 }}
+              animate={{ x: 0 }}
               transition={{ type: "spring", bounce: 0 }}
-              exit={{ y: -300 }}
-              className="bg-[#F4F4EE] md:hidden w-[100vw] flex flex-col gap-[10px] pb-[10px]  absolute"
+              exit={{ x: 500 }}
+              className="fixed z-50 bg-[#F4F4EE] md:hidden w-[100vw] flex flex-col gap-[10px] pb-[10px] h-[100vh]"
+              onClick={toggleMenu}
             >
-              <div className="flex flex-row justify-between p-[25px] items-center h-[84px]">
+              <div className="flex flex-row p-[25px] w-full items-center justify-between h-[84px] absolute">
                 <Image
                   src={letterB}
                   alt="logo"
@@ -111,42 +112,44 @@ const Hero = () => {
                   onClick={toggleMenu}
                 />
               </div>
-              <Link
-                href="#projects"
-                scroll={false}
-                className="flex justify-center"
-              >
-                <li className="font-raleway font-[400] text-[#686868]">
-                  projects
-                </li>
-              </Link>
-              <Link
-                href="#services"
-                scroll={false}
-                className="flex justify-center"
-              >
-                <li className="font-raleway font-[400] text-[#686868]">
-                  services
-                </li>
-              </Link>
-              <Link
-                href="#about"
-                scroll={false}
-                className="flex justify-center"
-              >
-                <li className="font-raleway font-[400] text-[#686868]">
-                  about us
-                </li>
-              </Link>
-              <Link
-                href="#contact"
-                scroll={false}
-                className="flex justify-center"
-              >
-                <li className="font-raleway font-[400] text-[#686868]">
-                  contact
-                </li>
-              </Link>
+              <div className="flex flex-col gap-16 h-[100%] items-center justify-center">
+                <Link
+                  href="#projects"
+                  scroll={false}
+                  className="flex justify-center"
+                >
+                  <li className="font-raleway font-[200] text-[#686868] text-[1.5rem]">
+                    projects
+                  </li>
+                </Link>
+                <Link
+                  href="#services"
+                  scroll={false}
+                  className="flex justify-center"
+                >
+                  <li className="font-raleway font-[200] text-[#686868] text-[1.5rem]">
+                    services
+                  </li>
+                </Link>
+                <Link
+                  href="#about"
+                  scroll={false}
+                  className="flex justify-center"
+                >
+                  <li className="font-raleway font-[200] text-[#686868] text-[1.5rem]">
+                    about us
+                  </li>
+                </Link>
+                <Link
+                  href="#contact"
+                  scroll={false}
+                  className="flex justify-center"
+                >
+                  <li className="font-raleway font-[200] text-[#686868] text-[1.5rem]">
+                    contact
+                  </li>
+                </Link>
+              </div>
             </motion.ul>
           ) : null}
         </AnimatePresence>
