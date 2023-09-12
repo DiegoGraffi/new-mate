@@ -26,7 +26,7 @@ const AboutCard = ({ id, open, imgUrl, title, text, index, handleClick }) => {
           </div>
 
           <div className="absolute z-50 bg-secondary self-end py-8 left-0 lg:bottom-0 w-[100%] h-[40%] flex justify-center items-center rounded-b-xl">
-            <h3 className="font-raleway font-[400] text-[16px] md:text-[24px] text-darkGrey lg:rotate-[-90deg] lg:origin-[0,0] ">
+            <h3 className="font-raleway font-[600] text-[16px] md:text-[24px] text-darkGrey lg:rotate-[-90deg] lg:origin-[0,0] ">
               {title}
             </h3>
           </div>
