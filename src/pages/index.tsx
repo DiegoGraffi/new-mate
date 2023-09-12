@@ -5,6 +5,7 @@ import Services from "@/sections/Services";
 import About from "@/sections/About";
 import Contact from "@/sections/Contact";
 import Head from "next/head";
+import Footer from "@/sections/Footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Services />
         <About />
         <Contact />
+        <Footer />
       </div>
     </>
   );
